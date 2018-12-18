@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  text-align: justify;
+}
+
+.container {
+  width: 800px;
+  margin: auto;
+}
+
+.page-header .header-img {
+  border-bottom: 3px solid #666666;
+}
+
+.page-header .main-nav {
+  padding-top: 15px;
+}
+
+.page-header .main-nav ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.page-header .main-nav li {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.main-nav li a {
+  margin: 0 5px;
+  padding: 0 8px;
+  color: #06b906;
+  text-decoration: none;
+  border-top: 2px solid #06b906;
+  border-bottom: 2px solid #06b906;
+}
+
+.main-nav li a:hover {
+  color: #218b21;
+  border-color: #218b21;
+}
+
+.content {
+  padding: 15px 0;
+}
+
+.content img {
+  width: 200px;
+  margin: 20px;
+  border: 1px solid #000000;
+}
+
+.page-footer {
+  text-align: center;
+  height: 100px;
+  border-top: 1px solid #666666;
+  background-image: url(img/rzezucha-dol.png);
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
