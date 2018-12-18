@@ -10,16 +10,16 @@ html {
 body {
   background-color: #444444;
   color: #dddddd;
-  font-size: 20rem;
+  font-size: 16rem;
   font-family: sans-serif;
 }
 
 .page-header {
-  padding: 60px;
+  padding: 30px;
 }
 
 .page-header h1 {
-  font-size: 60rem;
+  font-size: 3em;
   text-align: center;
 }
 
@@ -28,6 +28,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .subject {
@@ -39,7 +40,7 @@ main {
   padding: 6px;
   margin: 10px;
   box-sizing: border-box;
-
+  max-width: 100%;
   
   transition: box-shadow .2s;
 }
@@ -97,4 +98,24 @@ main a:hover {
   background-size: contain;
   width: 40px;
   height: 40px;
+}
+
+@media(min-width: 550px) {
+  body {
+    font-size: 20rem;
+  }
+
+  .page-header {
+    padding: 45px;
+  }
+}
+
+@media(min-width: 900px) {
+  body {
+    font-size: 20rem;
+  }
+
+  .page-header {
+    padding: 60px;
+  }
 }
