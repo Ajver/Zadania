@@ -74,7 +74,7 @@ main {
   background-color: #dda835;
 }
 
-a {
+main a {
   color: #a5dbf5;
   text-decoration: none;
   border-bottom: 1px solid transparent;
@@ -84,7 +84,17 @@ a {
   transition: .2s;
 }
 
-a:hover {
+main a:hover {
   color: #7ec6eb;
   border-color: #7ec6eb;
+}
+
+.github-icon {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background-image: url(githubicon.png);
+  background-size: contain;
+  width: 40px;
+  height: 40px;
 }
