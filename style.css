@@ -69,6 +69,14 @@ main {
 
 .subject ul li {
   margin: 6px 0;
+  position: relative;
+}
+
+.subject ul li .download {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 0;
 }
 
 .subject.tssi h2 {
