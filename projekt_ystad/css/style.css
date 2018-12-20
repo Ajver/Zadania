@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+}
+
+#container {
+    width: 800px;
+    margin: auto;
+}
+
+#header {
+    height: 190px;
+    background-image: url(../img/5.jpg);
+}
+
+#header .menu {
+    font-size: 20px;
+    text-align: right;
+}
+
+#content {
+    height: 560px;
+    background-color: #F5F7FA;
+    overflow: auto;
+}
+
+#content p {
+    margin: 10px 50px;
+    text-align: justify;
+} 
+
+#content p > i {
+    color: #555555;
+}
+
+#footer {
+    height: 50px;
+    background-color: #4D4D4D;
+    color: #ffffff;
+    text-align: center;
+    overflow: auto;
+}
