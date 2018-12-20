@@ -18,8 +18,13 @@ body {
 }
 
 #header .menu {
-    font-size: 20px;
+    font-size: 20pt;
     text-align: right;
+}
+
+#header .title {
+    font-size: 100pt;
+    font-weight: bold;
 }
 
 #content {
@@ -35,6 +40,13 @@ body {
 
 #content p > i {
     color: #555555;
+}
+
+#content a:visited,
+#content a:link {
+    text-decoration: none;
+    color: #000000; 
+    font-style: italic;
 }
 
 #footer {
