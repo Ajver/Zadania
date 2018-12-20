@@ -1,0 +1,150 @@
+html {
+  font-size: 1px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #444444;
+  color: #dddddd;
+  font-size: 16rem;
+  font-family: sans-serif;
+}
+
+.page-header {
+  padding: 30px;
+}
+
+.page-header h1 {
+  font-size: 3em;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.subject {
+  color: #efefef;
+  width: 400px;
+  background-color: #999999;
+  border: 1px solid #333333;
+  box-shadow: 0 0 6px 0 #222222;
+  padding: 6px;
+  margin: 10px;
+  box-sizing: border-box;
+  max-width: 100%;
+  border-radius: 5px;
+  
+  transition: box-shadow .2s;
+}
+
+.subject:hover {
+  box-shadow: 0 0 12px 0 #222222;
+}
+
+.subject h2 {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #888888;
+}
+
+.subject p,
+.subject ul,
+.subject ol {
+  margin: 6px 0;
+}
+
+.subject ul {
+  margin: 6px 0;
+  margin-left: 30px;
+}
+
+.subject li {
+  margin: 6px 0;
+  position: relative;
+}
+
+.subject li .download {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 20px;
+  opacity: 0;
+  width: 26px;
+  height: 26px;
+  background-image: url(download.png);
+  -webkit-background-size: contain;
+  background-size: contain;
+  border: none;
+  
+  transition: .2s;
+}
+
+.subject li:hover .download {
+  opacity: 1;
+}
+
+.subject.tssi h2 {
+  background-color: #dda835;
+}
+
+main a {
+  color: #a5dbf5;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  box-sizing: border-box;
+  padding-bottom: 2px;
+
+  transition: .2s;
+}
+
+main a:hover {
+  color: #7ec6eb;
+  border-color: #7ec6eb;
+}
+
+.github-icon {
+  position: fixed;
+  left: 10px;
+  top: 10px;
+  background-image: url(githubicon.png);
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+
+  transition: box-shadow .2s;
+}
+
+.github-icon:hover {
+  box-shadow: 0 0 12px 0 #222222;
+}
+
+@media(min-width: 550px) {
+  body {
+    font-size: 20rem;
+  }
+
+  .page-header {
+    padding: 45px;
+  }
+}
+
+@media(min-width: 900px) {
+  body {
+    font-size: 20rem;
+  }
+
+  .page-header {
+    padding: 60px;
+  }
+}
