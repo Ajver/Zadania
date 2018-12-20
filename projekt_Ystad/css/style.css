@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    
+}
+
+#container {
+    width: 800px;
+    margin: auto;
+}
+
+#header {
+    height: 190px;
+    background-image: url(../img/5.jpg);
+}
+
+#header .menu {
+    font-size: 20pt;
+    text-align: right;
+}
+
+#header .title {
+    font-size: 100pt;
+    font-weight: bold;
+}
+
+#content {
+    height: 560px;
+    background-color: #F5F7FA;
+    overflow: auto;
+}
+
+#content p {
+    margin: 10px 50px;
+    text-align: justify;
+} 
+
+#content p > i {
+    color: #555555;
+}
+
+#content a:visited,
+#content a:link {
+    text-decoration: none;
+    color: #000000; 
+    font-style: italic;
+}
+
+#footer {
+    height: 50px;
+    background-color: #4D4D4D;
+    color: #ffffff;
+    text-align: center;
+    overflow: auto;
+}
+.pionowo{
+    width:100px;
+}
+.poziomo{
+    height:100px;
+}
