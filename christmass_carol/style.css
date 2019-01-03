@@ -1,0 +1,67 @@
+html {
+    font-size: 1px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0e68c;
+    font-size: 22rem;
+    text-align: justify;
+    color: #884049;
+}
+
+
+.page-header h1,
+.page-header h2 {
+    text-align: center;
+}
+
+.page-header {
+    margin: 200px 0;
+    font-size: 40rem;
+}
+
+blockquote {
+    margin: 40px 0;
+    text-indent: 60rem;
+}
+
+.author {
+    text-align: right;
+    font-style: italic;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+article {
+    margin: 60px 0;
+}
+
+.sections {
+    display: flex;
+    justify-content: center;
+}
+
+.column {
+    width: 33.3333%;
+    box-sizing: border-box;
+    padding: 10px;
+    border-right: 1px solid #666666;
+}
+
+h3 {
+    font-size: 35rem;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.column:last-child {
+    border-right: none;
+}
