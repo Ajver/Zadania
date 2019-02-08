@@ -1,0 +1,23 @@
+MIKI.prezenty
+
+Strona g³ówna
+Galeria podarunków
+Miko³ajkowe promocje
+Pomocnicy Œw. Miko³aja
+20% zni¿ki dla grzecznych!
+
+Perfekcyjne MIKO£AJKI
+wymagaj¹ zaanga¿owania i fantazji!
+I trzeba byæ grzecznym ca³y rok!
+Zaskocz swoich najbli¿szych...
+
+AUTOR
+Copyright 2016 ZSE Kraków
+Miano: Imiê Nazwisko
+Klasa: extraklasa
+OPIS
+Jest to sprwdzian umiejêtnoœci praktycznych z HTML i CSS. Umiem ju¿ ca³kiem sporo, ale jeszczo sporo siê nauczê!
+KONTAKT
+Biuro obs³ugi Œwiêtego Miko³aja
+Listy do mnie œlij na:
+miki.prezenty@gmail.com
