@@ -92,7 +92,8 @@ main > article {
   padding: 60px;
 }
 
-.main-section {
+.main-section,
+.page-footer {
   background-color: #202030;
   color: #c1c1c1;
 }
@@ -104,4 +105,11 @@ main > article {
 
 .paremeters-section h1 {
   border-color: #202030;
+}
+
+.page-footer {
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16rem;
 }
