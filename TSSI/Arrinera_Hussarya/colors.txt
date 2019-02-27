@@ -1,7 +1,7 @@
 Fiolet: #202030
 Szary: #d0ccd0
 Szary: #c1c1c1
-Bia³y: #fff8f0
+Biaï¿½y: #fff8f0
 Czerwony: #c9130c
 
 Strona:
