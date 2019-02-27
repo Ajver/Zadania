@@ -3,6 +3,7 @@ Szary: #d0ccd0
 Szary: #c1c1c1
 Bia�y: #fff8f0
 Czerwony: #c9130c
+Czerwony: #950904
 
 Strona:
 http://www.arrinera.com/pl/samochod/#nadwozie
