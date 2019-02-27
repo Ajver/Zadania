@@ -43,6 +43,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.wrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
 .page-header {
   width: 100%;
   height: 34vw;
@@ -138,9 +144,10 @@ main > article {
 
 .slider {
   position: relative;
-  width: 80vw;
-  height: 48vw;
-  margin: auto;
+  width: 80%;
+  height: 40vw;
+  max-height: 480px;
+  margin: 40px auto;
   display: flex;
   align-items: center;
 }
@@ -148,6 +155,7 @@ main > article {
 .slider img {
   display: none;
   width: 100%;
+  height: 100%;
   margin: auto;
   opacity: 0;
   transition: opacity .4s;
@@ -190,6 +198,7 @@ main > article {
   flex-direction: column;
   align-items: center;
   width: 600px;
+  max-width: 100%;
   margin: auto;
 }
 
