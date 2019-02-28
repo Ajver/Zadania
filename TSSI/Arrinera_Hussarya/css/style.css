@@ -55,7 +55,7 @@ a:hover {
   width: 100%;
   height: 34vw;
   margin-top: 100px;
-  background-image: url(../img/hus1.jpg);
+  background-image: url(../img/page-header.jpg);
   background-position: 0 100px;
   background-size: contain;
   background-attachment: fixed;
@@ -103,14 +103,12 @@ a:hover {
 }
 
 .main-nav li,
-.slider .arrow-btn,
 .contact-form button {
   background-color: transparent;
   border: 1px solid transparent;
   transition: background-color .1s, border-color .1s;
 }
 .main-nav li:hover,
-.slider .arrow-btn:hover,
 .contact-form button:hover {
   border-color: #c9130c;
 }
@@ -155,9 +153,10 @@ main > article {
   margin: 40px auto;
   display: flex;
   align-items: center;
+  list-style: none;
 }
 
-.slider img {
+.slider-img {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -165,38 +164,21 @@ main > article {
   height: 100%;
   margin: auto;
   opacity: 0;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   
   transition: opacity .5s;
 }
 
-.slider img.active {
-  display: block;
+.slider-img.active {
   opacity: 1;
 }
 
-.slider .arrow-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  outline: none;
-  cursor: pointer;
-  font-size: 200%;
-  color: #202030;
-}
-
-.slider .arrow-btn:hover {
-  background-color: #d0ccd0;
-}
-
-.slider .arrow-left {
-  right: calc(100% + 1vw);
-}
-
-.slider .arrow-right {
-  left: calc(100% + 1vw);
-}
+.slider-img-1 { background-image: url(../img/hus1.jpg); }
+.slider-img-2 { background-image: url(../img/hus2.jpg); }
+.slider-img-3 { background-image: url(../img/hus3.jpg); }
+.slider-img-4 { background-image: url(../img/hus4.jpg); }
 
 .contact-section {
   background-color: #d0ccd0;
