@@ -5,24 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/Arrinera-icon.png">
   <title> ZSE | ARRINERA HUSSARYA</title>
 </head>
 <body>
   <header class="page-header">
-    <div class="top-bar">
+    <div id="top-bar" class="top-bar">
       <img class="page-logo" src="img/page-logo.png" alt="logo Arrinera">
       <nav>
         <ul class="main-nav">
-          <li>Główna</li>
-          <li>Parametry</li>
-          <li>Galeria</li>
-          <li>Kontakt</li>
+          <li id="main-section-btn">Główna</li>
+          <li id="parameters-section-btn">Parametry</li>
+          <li id="gallery-section-btn">Galeria</li>
+          <li id="contact-section-btn">Kontakt</li>
         </ul>
       </nav>
     </div>
   </header>
   <main>
-    <article class="main-section">
+    <article id="main-section" class="main-section">
       <div class="wrap">
         <header>
           <h1>Co to jest?</h1>
@@ -42,7 +43,7 @@
         <p>Fundamentem naszego samochodu jest rama przestrzenna, jednocześnie służąca jako zgodna z przepisami FIA klatka bezpieczeństwa. Wykonuje się ją w Polsce z brytyjskiej stali, stosowanej także w przemyśle lotniczym.</p>
         </div>
     </article>
-    <article class="paremeters-section">
+    <article id="parameters-section" class="paremeters-section">
       <div class="wrap">
         <header>
           <h1>Parametry samochodu</h1>
@@ -82,17 +83,19 @@
         </section>
       </div>
     </article>
-    <article class="galery-section">
+    <article id="gallery-section" class="gallery-section">
       <div class="wrap">
-        <div class="slider">
-          <img src="img/hus2.jpg" alt="Hussarya" class="active">
-          <img src="img/hus3.jpg" alt="Hussarya">
+        <div id="slider" class="slider">
+          <img src="img/hus2.jpg" alt="Hussarya" class="slider-img active">
+          <img src="img/hus3.jpg" alt="Hussarya" class="slider-img">
+          <img src="img/hus1.jpg" alt="Hussarya" class="slider-img">
+          <img src="img/hus3.jpg" alt="Hussarya" class="slider-img">
           <button type="button" class="arrow-btn arrow-left">&lt;</button>
           <button type="button" class="arrow-btn arrow-right">&gt;</button>
         </div>
       </div> 
     </article>
-    <article class="contact-section">
+    <article id="contact-section" class="contact-section">
       <div class="wrap">
         <header>
           <h1>Zamów Arrinerę</h1>
@@ -118,5 +121,9 @@
       <p>Projekt i wykonanie: <a href="http://zawlocki-palka.epizy.com/" target="_blank">Dominik Zawlocki</a></p>
     </section>
   </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <script src="js/jquery.scrollTo.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/slider.js"></script>
 </body>
 </html>
