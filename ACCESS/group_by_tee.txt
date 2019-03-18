@@ -1,0 +1,1777 @@
+MariaDB [(none)]> USE uczniowie;
+Database changed
+MariaDB [uczniowie]> SOURCE uczniowie.txt;
+Query OK, 0 rows affected (0.12 sec)
+
+Query OK, 652 rows affected (0.10 sec)
+Records: 652  Duplicates: 0  Warnings: 0
+
+MariaDB [uczniowie]> DESCRIBE uczniowie;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| nr          | int(11)     | NO   | PRI | 0       |       |
+| imie        | varchar(20) | NO   |     |         |       |
+| nazwisko    | varchar(20) | NO   |     |         |       |
+| matematyka  | float       | NO   |     | 0       |       |
+| fizyka      | float       | NO   |     | 0       |       |
+| informatyka | float       | NO   |     | 0       |       |
+| angielski   | float       | NO   |     | 0       |       |
+| geografia   | float       | NO   |     | 0       |       |
+| chemia      | float       | NO   |     | 0       |       |
+| polski      | float       | NO   |     | 0       |       |
+| historia    | float       | NO   |     | 0       |       |
+| wychowawca  | varchar(20) | NO   |     |         |       |
++-------------+-------------+------+-----+---------+-------+
+12 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT nazwisko, count(*) FROM uczniowie GROUP BY uczniowie;
+ERROR 1054 (42S22): Unknown column 'uczniowie' in 'group statement'
+MariaDB [uczniowie]> SELECT nazwisko, count(*) FROM uczniowie GROUP BY nazwisko;
++-----------------+----------+
+| nazwisko        | count(*) |
++-----------------+----------+
+| Adamczak        |        1 |
+| Adamczyk        |        1 |
+| Anielski        |        1 |
+| Augustynska     |        3 |
+| Bachus          |        1 |
+| Bagsik          |        2 |
+| Bakowska        |        1 |
+| Balas           |        1 |
+| Balwierz        |        1 |
+| Banas           |        2 |
+| Barcinski       |        1 |
+| Basista         |        1 |
+| Bednarczyk      |        1 |
+| Belczyk         |        1 |
+| Bereta          |        1 |
+| Bernacki        |        1 |
+| Bialic          |        1 |
+| Bialy           |       19 |
+| Biborski        |        1 |
+| Biegan          |        1 |
+| Blazowski       |        1 |
+| Bobrowski       |        1 |
+| Boduch          |        1 |
+| Bohosiewicz     |        1 |
+| Borek           |        1 |
+| Borowicz        |        1 |
+| Brodowicz       |        1 |
+| Broniek         |        1 |
+| Bros            |        1 |
+| Brozek          |        1 |
+| Brzostek        |        1 |
+| Budkowski       |        1 |
+| Butscher        |        1 |
+| Cabaj           |        1 |
+| Chechelski      |        1 |
+| Chociej         |        1 |
+| Chrusciel       |       24 |
+| Chudzik         |        1 |
+| Ciaptacz        |        2 |
+| Cichon          |        1 |
+| Cieluch         |        1 |
+| Cieslik         |        1 |
+| Cwik            |        1 |
+| Czarnecki       |        1 |
+| Czarnek         |       20 |
+| Czarnik         |        1 |
+| Czubak          |        1 |
+| Daniel          |        1 |
+| Daria           |        1 |
+| Dec             |        1 |
+| Depinska        |        1 |
+| Dolinska        |        1 |
+| Dolny           |        1 |
+| Dospial         |        1 |
+| Drahus          |        1 |
+| Dudek           |        2 |
+| Dudzinski       |        1 |
+| Duraj           |        1 |
+| Dyrek           |        1 |
+| Eminowicz       |        1 |
+| Famielec        |        1 |
+| Fiema           |        1 |
+| Frankowski      |        1 |
+| Gad             |        1 |
+| Gadek           |        1 |
+| Gasior          |        1 |
+| Gawron          |        1 |
+| Godowski        |        1 |
+| Golec           |        1 |
+| Gora            |        1 |
+| Gorski          |        1 |
+| Grabska         |        1 |
+| Gruca           |        1 |
+| Gryga           |        1 |
+| Grzesiak        |        1 |
+| Grzybowska      |        1 |
+| Gurba           |        1 |
+| Gwizdz          |        1 |
+| Hajto           |        1 |
+| Holda           |        1 |
+| Iwo             |        1 |
+| Izdebska        |        1 |
+| Jackowski       |        1 |
+| Jakobik         |        1 |
+| Janeczek        |        1 |
+| Janiga          |        1 |
+| Janiszewska     |        1 |
+| Janus           |        1 |
+| Jasinski        |        2 |
+| Joanna          |        1 |
+| Kabaj           |        1 |
+| Kaczmarczyk     |        1 |
+| Kadziola        |        1 |
+| Kajda           |        1 |
+| Kalamar         |        1 |
+| Kaliszan        |        1 |
+| Kalita          |        1 |
+| Kamisinski      |        1 |
+| Kania           |        2 |
+| Karbowniczek    |        1 |
+| Klimkiewicz     |        1 |
+| Klos            |        1 |
+| Klucinska       |        1 |
+| Kluta           |        1 |
+| Kmiec           |        1 |
+| Kobus           |        1 |
+| Kolarz          |        1 |
+| Kolek           |        1 |
+| Kolodziej       |        1 |
+| Kolodziejczyk   |        3 |
+| Kosek           |        1 |
+| Kosiorowski     |        1 |
+| Kot             |       24 |
+| Kotarba         |        1 |
+| Kowalski        |        1 |
+| Kozlowski       |        2 |
+| Kraj            |        1 |
+| Kramarczyk      |        1 |
+| Krupa           |        1 |
+| Kryczko         |        1 |
+| Kryszkiewicz    |        1 |
+| Krzysztofinski  |        1 |
+| Ksiazek         |        1 |
+| Kubera          |        1 |
+| Kucharski       |        1 |
+| Kucma           |        1 |
+| Kujdowicz       |        1 |
+| Kulaj           |        1 |
+| Kurek           |        1 |
+| Kurowski        |        1 |
+| Kwater          |        1 |
+| Kwiecien        |        1 |
+| Langman         |        1 |
+| lapka           |       23 |
+| Lechowska       |        1 |
+| Lencznarowicz   |        1 |
+| Lepiarczyk      |        1 |
+| Leszczynski     |        1 |
+| Lopacz          |        1 |
+| Ludwin          |        1 |
+| Lumielski       |        1 |
+| Mach            |        1 |
+| Maciarz         |        1 |
+| Macieik         |        1 |
+| Maciejak        |        1 |
+| Mackiewicz      |        1 |
+| Maczka          |        1 |
+| Madej           |        1 |
+| Madrzyk         |        1 |
+| Majsak          |        1 |
+| Makyla          |        1 |
+| Malczyk         |        2 |
+| Malec           |        1 |
+| Malecka         |        1 |
+| Mardosz         |        1 |
+| Marek           |       26 |
+| Marzec          |        1 |
+| Maslowski       |        1 |
+| Mateszew        |        1 |
+| Mazur           |        1 |
+| Mech            |        1 |
+| Miaskiewicz     |        1 |
+| Michalek        |        1 |
+| Michaliszyn     |        1 |
+| Michta          |        1 |
+| Mika            |        1 |
+| Milos           |        1 |
+| Mis             |        1 |
+| Misiuda         |        1 |
+| Miskowiec       |        1 |
+| Mitkowski       |        1 |
+| Mizianty        |        1 |
+| Mlynarczyk      |        1 |
+| Mojsa           |        1 |
+| Molenda         |       21 |
+| Morawski        |        1 |
+| Musiewicz       |        1 |
+| Muszynska       |        1 |
+| Nanus           |        1 |
+| Niechaj         |        1 |
+| Niechcial       |        1 |
+| Niemiec         |        1 |
+| Nowak           |       31 |
+| Nowicki         |        1 |
+| Nucinska        |        1 |
+| Ogrodniczak     |        1 |
+| Olek            |        1 |
+| Oles            |        2 |
+| Oliwa           |        1 |
+| Olszewski       |        1 |
+| Orlowska        |        1 |
+| Osika           |        1 |
+| Ospala          |       12 |
+| Ostachowicz     |        1 |
+| Pajak           |        1 |
+| Palka           |        1 |
+| Pasieka         |        1 |
+| Pawlik          |        1 |
+| Peszt           |        1 |
+| Piatkowski      |        1 |
+| Piekarz         |        1 |
+| Piekos          |        1 |
+| Piela           |        1 |
+| Pietras         |        1 |
+| Piwowarczyk     |        1 |
+| Ploszaj         |        1 |
+| Pohorecka       |        1 |
+| Policht         |        1 |
+| Polys           |        1 |
+| Ponisz          |        1 |
+| Popielarczyk    |        1 |
+| Przygoda        |        1 |
+| Pyla            |        1 |
+| Pyzik           |        1 |
+| Radecka         |        1 |
+| Raj             |        1 |
+| Roczniak        |        1 |
+| Rogoz           |        1 |
+| Rojek           |        1 |
+| Rudnicka        |        1 |
+| Rudnicki        |        1 |
+| Sadecki         |        1 |
+| Salacinski      |        1 |
+| Sawicka         |        1 |
+| Seruga          |        1 |
+| Siemieszko      |       23 |
+| Sitko           |        1 |
+| Siuta           |        1 |
+| Siwczynska      |        1 |
+| Siwy            |       17 |
+| Skarbek         |        1 |
+| Slabiak         |        1 |
+| Sliwa           |        2 |
+| Sliwka          |        1 |
+| Slomski         |        1 |
+| Smilek          |        1 |
+| Sobolewska      |        1 |
+| Sobota          |        1 |
+| Sokolowska      |        1 |
+| Sokolowski      |        1 |
+| Sputo           |        1 |
+| Sroka           |        1 |
+| Stankiewicz     |        1 |
+| Statkiewicz     |        1 |
+| Stec            |        1 |
+| Stefaniak       |        1 |
+| Stypula         |        1 |
+| Swiatek         |        1 |
+| Swiderska       |        1 |
+| Swierk          |        1 |
+| Szatylowicz     |        1 |
+| Szczepaniec     |        1 |
+| Szczepankiewicz |        1 |
+| Szczerba        |        1 |
+| Szczesna        |       11 |
+| Szczesny        |       18 |
+| Szefer          |        1 |
+| Szewczyk        |        1 |
+| Szlachcic       |        1 |
+| Szmigielska     |        1 |
+| Szostak         |        2 |
+| Szostek         |        1 |
+| Szumylowicz     |        1 |
+| Szybowski       |        1 |
+| Szydlak         |        1 |
+| Taczuk          |        3 |
+| Telejko         |        1 |
+| Tokarski        |        1 |
+| Tokarz          |        2 |
+| Tomczyk         |        1 |
+| Torba           |        1 |
+| Toton           |        1 |
+| Trzebiatowski   |        1 |
+| Trzmiel         |        1 |
+| Trzopek         |        1 |
+| Turczyk         |        1 |
+| Tusinski        |        1 |
+| Tworzewski      |        1 |
+| Urbaniec        |        1 |
+| Walczynska      |        1 |
+| Wasielak        |        1 |
+| Wasik           |        1 |
+| Wasniowska      |        1 |
+| Wiensak         |        1 |
+| Wierzbicki      |        1 |
+| Wilczek         |        1 |
+| Wilkosz         |        1 |
+| Winogrodzki     |        1 |
+| Witkowska       |        2 |
+| Witkowski       |        1 |
+| Wlodarczyk      |        1 |
+| Wnek            |        1 |
+| Wo?niak         |        1 |
+| Wohlfeld        |        1 |
+| Wojcik          |        1 |
+| Wojtas          |        1 |
+| Wojtowicz       |        1 |
+| Wolanska        |        1 |
+| Wrobel          |        1 |
+| Wroblewski      |        1 |
+| Wronka          |        1 |
+| Wronski         |        1 |
+| Wytwinowska     |        1 |
+| zaba            |        1 |
+| Zabierowski     |        1 |
+| Zachorowska     |        1 |
+| Zagorski        |        2 |
+| Zagrodzki       |       18 |
+| Zajac           |        2 |
+| Zajonc          |        1 |
+| Zapala          |        1 |
+| Zawada          |       25 |
+| zelazny         |       15 |
+| Zieba           |        1 |
+| Zielinski       |        1 |
+| Zietara         |        1 |
+| Zimirski        |        1 |
+| Zimny           |        1 |
+| Zuchowska       |        1 |
+| Zuzek           |        1 |
++-----------------+----------+
+320 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT nazwisko, count(*) FROM uczniowie GROUP BY nazwisko LIMIT 10;
++-------------+----------+
+| nazwisko    | count(*) |
++-------------+----------+
+| Adamczak    |        1 |
+| Adamczyk    |        1 |
+| Anielski    |        1 |
+| Augustynska |        3 |
+| Bachus      |        1 |
+| Bagsik      |        2 |
+| Bakowska    |        1 |
+| Balas       |        1 |
+| Balwierz    |        1 |
+| Banas       |        2 |
++-------------+----------+
+10 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT nazwisko, count(*) FROM uczniowie LIMIT 10;
++------------+----------+
+| nazwisko   | count(*) |
++------------+----------+
+| Frankowski |      652 |
++------------+----------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT nazwisko, count(nazwisko) FROM uczniowie LIMIT 10;
++------------+-----------------+
+| nazwisko   | count(nazwisko) |
++------------+-----------------+
+| Frankowski |             652 |
++------------+-----------------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]>  DESCRIBE uczniowie
+    -> ;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| nr          | int(11)     | NO   | PRI | 0       |       |
+| imie        | varchar(20) | NO   |     |         |       |
+| nazwisko    | varchar(20) | NO   |     |         |       |
+| matematyka  | float       | NO   |     | 0       |       |
+| fizyka      | float       | NO   |     | 0       |       |
+| informatyka | float       | NO   |     | 0       |       |
+| angielski   | float       | NO   |     | 0       |       |
+| geografia   | float       | NO   |     | 0       |       |
+| chemia      | float       | NO   |     | 0       |       |
+| polski      | float       | NO   |     | 0       |       |
+| historia    | float       | NO   |     | 0       |       |
+| wychowawca  | varchar(20) | NO   |     |         |       |
++-------------+-------------+------+-----+---------+-------+
+12 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT min(fizyka), max(fizyka) FROM uczniowie LIMIT 10;
++-------------+-------------+
+| min(fizyka) | max(fizyka) |
++-------------+-------------+
+|           1 |           6 |
++-------------+-------------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, avg(fizyka) FROM uczniowie GROUP BY wychowawca LIMIT 10;
++------------+--------------------+
+| wychowawca | avg(fizyka)        |
++------------+--------------------+
+| Agat       |   3.10000003973643 |
+| Armatys    | 3.3052631616592407 |
+| Baj        | 3.6142857500485013 |
+| Baran      | 3.2333333412806193 |
+| Bialy      |  3.935714270387377 |
+| Blachy     | 3.7266666889190674 |
+| Broda      |  3.707142880984715 |
+| Czech      |  3.200000007947286 |
+| Czeresnia  |  2.871428506714957 |
+| Drobson    |  3.545454567128962 |
++------------+--------------------+
+10 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT * FROM uczniowie;
++-------+------------+-----------------+------------+--------+-------------+-----------+-----------+--------+--------+----------+------------+
+| nr    | imie       | nazwisko        | matematyka | fizyka | informatyka | angielski | geografia | chemia | polski | historia | wychowawca |
++-------+------------+-----------------+------------+--------+-------------+-----------+-----------+--------+--------+----------+------------+
+| 13713 | Monika     | Frankowski      |        4.6 |    4.5 |         1.8 |       1.7 |       2.1 |    4.3 |    1.3 |      2.6 | Blachy     |
+| 13714 | Jan        | lapka           |        5.3 |    1.9 |         5.9 |         3 |       2.6 |    5.8 |    4.7 |      2.1 | Godowski   |
+| 13715 | Miroslawa  | Nowak           |          5 |    2.5 |         2.2 |       1.5 |       5.5 |    3.8 |    4.4 |      5.3 | Krakowski  |
+| 13716 | Krzysztof  | Maciejak        |        4.2 |    5.8 |         1.4 |       1.5 |         3 |    1.4 |    4.4 |      4.3 | Muryn      |
+| 13717 | Wiktor     | Zagrodzki       |        2.3 |    3.9 |         5.6 |       1.3 |       3.6 |    3.2 |    1.7 |      2.2 | Siwy       |
+| 13718 | Feliks     | Nowak           |        4.2 |    5.6 |         1.7 |       2.9 |       4.9 |    4.5 |    2.9 |      5.9 | Fasola     |
+| 13719 | Iwona      | Zawada          |        3.7 |    2.6 |         1.3 |       3.7 |       3.2 |    5.1 |    4.5 |      4.9 | Pala       |
+| 13720 | Jan        | Wronski         |        4.8 |    2.6 |         1.4 |       1.5 |       4.6 |    3.4 |    4.5 |      3.8 | Sewiolo    |
+| 13721 | Jan        | Smilek          |        3.5 |      3 |         4.2 |       2.7 |       5.2 |    4.4 |    2.1 |      4.1 | Siwy       |
+| 13722 | Krzysztof  | Chrusciel       |        3.9 |    3.7 |         1.3 |       3.8 |       4.8 |    1.5 |    2.4 |      2.6 | Agat       |
+| 13723 | Boleslaw   | Dolinska        |        5.7 |    3.7 |         4.7 |       4.7 |       1.8 |    2.1 |    1.1 |      2.1 | Czech      |
+| 13724 | Adam       | Molenda         |        1.9 |    2.2 |         2.1 |       3.5 |       2.6 |    5.6 |    4.6 |      4.2 | Jasiek     |
+| 13725 | Maciej     | Piekos          |        2.6 |    5.5 |         4.9 |       2.6 |       5.6 |    1.5 |    3.5 |        2 | Kot        |
+| 13726 | Tomasz     | Milos           |        4.4 |    2.1 |         1.3 |       2.7 |       2.4 |    5.2 |    5.9 |      5.9 | Blachy     |
+| 13727 | Marcin     | Czarnek         |        3.3 |    2.7 |         5.3 |       1.7 |       2.6 |    4.7 |    2.8 |      4.4 | sliwa      |
+| 13728 | Krzysztof  | Kryczko         |        4.7 |    2.2 |         2.7 |       2.3 |       4.3 |    3.3 |    2.8 |      4.2 | Kowal      |
+| 13729 | Andrzej    | Kaliszan        |        1.6 |    5.7 |           6 |       1.9 |       1.9 |    1.9 |    3.1 |        3 | Baj        |
+| 13730 | Maria      | Marek           |        3.1 |    1.9 |         4.6 |         6 |         4 |    4.9 |    4.1 |      1.8 | Sek        |
+| 13731 | Pawel      | Morawski        |        2.8 |    4.5 |         1.4 |       3.4 |       4.1 |    2.6 |    5.2 |      2.1 | Pies       |
+| 13732 | Joanna     | Molenda         |        3.7 |    2.9 |         4.9 |       3.8 |       3.2 |    1.9 |    4.5 |      1.6 | Broda      |
+| 13733 | Justyna    | Czarnek         |        1.8 |    1.2 |         4.9 |       2.4 |         5 |    3.2 |      5 |      3.9 | Bialy      |
+| 13734 | Aleksandra | Miaskiewicz     |        2.4 |    2.3 |           3 |       1.5 |         1 |    3.7 |    1.7 |      5.4 | Baran      |
+| 13735 | Maciej     | Mitkowski       |        4.2 |    3.6 |         1.8 |       1.9 |       1.7 |    4.6 |    1.9 |      5.1 | Rusek      |
+| 13736 | Barbara    | Taczuk          |        5.4 |    2.2 |         3.2 |       5.8 |         3 |    2.5 |    1.6 |      4.8 | Armatys    |
+| 13737 | Michal     | Kot             |        3.7 |    5.5 |         2.6 |       5.9 |       4.6 |    5.4 |    4.8 |      3.8 | Ospala     |
+| 13738 | Cecylia    | Chrusciel       |        1.1 |    5.6 |         1.6 |         3 |       2.1 |    2.7 |    5.8 |      1.4 | Gruszka    |
+| 13739 | Janusz     | Zawada          |        4.9 |    1.5 |         4.2 |       5.5 |       3.9 |    1.1 |    5.5 |      2.4 | Kowal      |
+| 13740 | Wiktor     | Bagsik          |        2.5 |      3 |         1.4 |       5.1 |       2.7 |    5.7 |    3.5 |      5.5 | Czech      |
+| 13741 | Stefan     | Biegan          |          2 |    4.8 |         2.4 |       4.3 |       5.3 |    3.8 |      2 |      4.1 | Jakubowski |
+| 13742 | Cecylia    | Molenda         |        2.6 |    5.5 |         1.6 |       1.7 |       3.5 |    4.8 |      2 |      4.7 | Pies       |
+| 13743 | Miroslawa  | Budkowski       |        5.4 |    2.6 |         3.2 |       1.7 |       2.3 |    1.8 |    2.1 |      4.2 | Koba       |
+| 13744 | Zygmunt    | Siwy            |        5.4 |    4.8 |         4.1 |       4.6 |       4.8 |    4.5 |    5.3 |      1.2 | Zdanowicz  |
+| 13745 | Alina      | Szczerba        |        1.4 |    5.6 |           4 |         1 |         2 |    5.3 |      5 |      1.7 | Zawada     |
+| 13746 | Janusz     | Jackowski       |          3 |    1.6 |         5.4 |       2.2 |         3 |    2.1 |    3.8 |      3.5 | Gruszka    |
+| 13747 | Boleslaw   | Szlachcic       |        1.4 |      5 |         3.2 |       1.4 |         5 |    2.1 |    1.4 |      5.3 | Armatys    |
+| 13748 | Iwona      | Szczesna        |        4.6 |    2.2 |         2.4 |       5.9 |       1.3 |    2.5 |    5.6 |      1.6 | Czeresnia  |
+| 13749 | Zygmunt    | Szczesny        |        1.5 |    4.6 |         4.3 |       2.2 |       3.1 |    3.1 |    4.1 |      2.9 | Siwy       |
+| 13750 | Cecylia    | Szostak         |        4.6 |    5.9 |         1.3 |       4.8 |       1.9 |    1.6 |      5 |      1.5 | Koba       |
+| 13751 | Iwona      | Przygoda        |        4.9 |    1.7 |         2.9 |       2.9 |       5.1 |    3.1 |    3.1 |      1.5 | Rusek      |
+| 13752 | Pawel      | Gorski          |          3 |      6 |         4.9 |       2.4 |       2.6 |    1.3 |    3.9 |      4.2 | Molenda    |
+| 13753 | Mariusz    | Nowak           |        3.9 |      5 |         1.2 |       5.1 |       3.1 |      5 |    4.6 |      4.4 | Baj        |
+| 13754 | Tomasz     | lapka           |        5.7 |    2.7 |         1.7 |       2.8 |       1.9 |    5.9 |    5.6 |      5.6 | Godowski   |
+| 13755 | Michal     | Lopacz          |          3 |    2.4 |         1.2 |       5.5 |       5.9 |    3.4 |    5.7 |      1.4 | Komar      |
+| 13756 | Jaroslaw   | Nowicki         |        1.8 |    2.3 |         4.6 |       2.9 |       5.3 |    2.1 |    5.3 |      2.7 | Samson     |
+| 13757 | Piotr      | lapka           |        2.2 |    5.3 |         4.1 |       5.2 |       4.8 |    4.3 |    2.4 |      3.9 | Lesiak     |
+| 13758 | Katarzyna  | Bialy           |        3.3 |    5.1 |         5.6 |         3 |       5.4 |    2.7 |    5.3 |      1.4 | zbik       |
+| 13759 | Magdalena  | Fiema           |        1.6 |      4 |         1.2 |       5.5 |       4.5 |      3 |    4.2 |      5.9 | Gruszka    |
+| 13760 | Anna       | Bereta          |        4.1 |    3.3 |         4.8 |       4.4 |       1.3 |    2.1 |    5.2 |        4 | Czech      |
+| 13761 | Magdalena  | Tusinski        |        1.2 |    3.9 |         1.3 |       3.3 |       3.9 |    5.9 |    3.3 |      2.4 | Stalone    |
+| 13762 | Maciej     | Sadecki         |        1.1 |    1.9 |         5.6 |       4.6 |       3.5 |    5.4 |    1.1 |      4.7 | Kret       |
+| 13763 | lukasz     | Popielarczyk    |        1.8 |    2.2 |         4.8 |       2.8 |       1.4 |    1.5 |    3.3 |      1.1 | Fasola     |
+| 13764 | Adam       | Adamczyk        |        3.7 |    1.3 |           3 |       3.2 |       3.9 |    2.8 |    2.3 |      5.7 | Agat       |
+| 13765 | Pawel      | Daniel          |          1 |    1.5 |         4.6 |       4.1 |       4.2 |    3.1 |    4.6 |      5.9 | Bialy      |
+| 13766 | Malgorzata | Cieluch         |        4.5 |    3.4 |         3.1 |       3.2 |       4.3 |    5.6 |    2.5 |      1.5 | Jasiek     |
+| 13767 | Malgorzata | Zuchowska       |        1.2 |      1 |         2.3 |       4.4 |       4.4 |      3 |    5.4 |      2.8 | zbik       |
+| 13768 | Sylwia     | Ospala          |        4.4 |    2.6 |         5.2 |       1.8 |       3.5 |    3.9 |    2.1 |      5.6 | Mleczko    |
+| 13769 | Barbara    | Mlynarczyk      |        2.1 |    1.3 |           2 |       3.8 |       2.4 |    5.1 |    1.2 |        4 | Sewiolo    |
+| 13770 | Jan        | zelazny         |        4.4 |    1.7 |         2.9 |       2.4 |       2.2 |    5.6 |    4.2 |        4 | Maciarz    |
+| 13771 | Krzysztof  | Zajac           |        5.3 |    5.5 |         5.7 |       3.9 |       2.9 |    5.1 |    2.4 |        2 | Wegier     |
+| 13772 | Zygmunt    | Makyla          |        5.2 |    3.1 |         3.6 |       5.7 |       4.2 |    3.6 |    1.2 |        3 | Sek        |
+| 13773 | Stefan     | Kosiorowski     |        1.7 |    1.6 |         1.4 |       2.3 |       4.9 |    4.2 |    2.3 |      1.4 | Niemiec    |
+| 13774 | Stefan     | Zielinski       |        5.8 |    2.2 |         2.5 |       1.1 |       1.9 |    4.9 |    3.1 |      1.8 | Zdanowicz  |
+| 13775 | Janusz     | Wasniowska      |        1.8 |    4.7 |         1.2 |       2.2 |       3.2 |    5.6 |    2.9 |        1 | Jasiek     |
+| 13776 | Krzysztof  | Molenda         |        3.5 |    2.8 |           4 |       4.3 |       4.4 |    3.8 |    2.8 |      1.4 | Molenda    |
+| 13777 | Alina      | Siemieszko      |        2.4 |    3.9 |           2 |       3.8 |       1.7 |    4.4 |    2.9 |      1.5 | Agat       |
+| 13778 | Barbara    | Chrusciel       |        2.3 |    3.8 |         1.8 |       4.9 |       1.6 |      3 |    2.4 |      4.6 | Godowski   |
+| 13779 | Alina      | Tokarz          |        3.2 |    3.4 |         3.9 |       2.5 |       3.6 |    4.5 |    3.7 |      4.6 | Siwy       |
+| 13780 | Iwona      | Salacinski      |        5.6 |    1.7 |         2.5 |       1.3 |         3 |      2 |    4.6 |      1.3 | Blachy     |
+| 13781 | Alina      | Ksiazek         |        3.7 |      2 |         4.1 |       1.8 |       5.3 |    3.1 |    4.9 |      1.5 | Broda      |
+| 13782 | Stanislaw  | Czarnek         |        1.1 |    1.7 |         5.5 |       3.4 |       4.7 |    4.5 |    4.9 |      1.9 | Samson     |
+| 13783 | Piotr      | Nowak           |          5 |    3.6 |         3.5 |       5.7 |       1.3 |    2.3 |      5 |      5.2 | Stalone    |
+| 13784 | Patryk     | Piela           |          1 |    4.7 |         5.1 |       4.6 |       4.2 |    3.4 |      6 |        3 | Zieba      |
+| 13785 | lukasz     | Zabierowski     |        4.3 |    1.8 |         1.5 |       2.4 |       1.8 |    2.3 |    4.5 |      2.4 | Kowal      |
+| 13786 | Michal     | Wolanska        |        3.1 |    3.1 |         1.8 |       2.1 |       4.2 |    2.8 |    4.8 |      3.4 | Lesiak     |
+| 13787 | Bartlomiej | Tworzewski      |        2.3 |      1 |         4.3 |       4.2 |       2.5 |    1.6 |    3.5 |      3.7 | Zdanowicz  |
+| 13788 | Beata      | Pietras         |        5.7 |    3.1 |         3.4 |       2.9 |       2.9 |    2.2 |    3.5 |      3.5 | Koba       |
+| 13789 | Anna       | Chrusciel       |        3.5 |    1.8 |         5.5 |       3.1 |         2 |    1.9 |    2.5 |      3.2 | Baran      |
+| 13790 | Jacek      | Barcinski       |        1.9 |    5.6 |         2.6 |       1.8 |       2.1 |    1.6 |    5.7 |      2.8 | Krakowski  |
+| 13791 | Bartosz    | Dudek           |        1.3 |    4.1 |         4.9 |       5.5 |       5.2 |    4.4 |    2.7 |        5 | Muryn      |
+| 13792 | Kinga      | lapka           |        5.2 |    4.4 |         3.7 |       5.4 |       2.7 |    2.2 |    4.6 |      4.3 | Broda      |
+| 13793 | Jadwiga    | Bialy           |        3.7 |      5 |         4.3 |       4.3 |       2.7 |    5.4 |    3.9 |      2.2 | Zawada     |
+| 13794 | Grzegorz   | Zagrodzki       |          6 |      2 |           1 |       2.3 |       2.4 |    4.3 |    1.7 |      3.9 | Jung       |
+| 13795 | Michal     | Wohlfeld        |          5 |    1.1 |         1.1 |         3 |       3.8 |    3.4 |    2.8 |      5.2 | Krakowski  |
+| 13796 | Robert     | Kolodziej       |        2.4 |    2.2 |         2.9 |       5.3 |       2.7 |    4.5 |    3.5 |      1.4 | Piwko      |
+| 13797 | Malwina    | Mech            |        3.7 |    4.9 |         2.6 |       2.4 |       5.9 |    5.8 |    5.3 |      3.9 | Zieba      |
+| 13798 | Norbert    | Borek           |        5.1 |    2.3 |           5 |       5.7 |       2.7 |    4.1 |      3 |      2.3 | Sek        |
+| 13799 | Izabela    | Anielski        |        1.8 |    5.4 |         2.8 |       3.9 |       2.8 |    4.5 |    2.5 |      1.4 | sliwa      |
+| 13800 | Aleksandra | Niechcial       |        5.8 |    4.3 |         1.2 |       1.3 |       2.1 |    1.1 |    4.8 |      4.2 | Broda      |
+| 13801 | Jan        | zelazny         |        5.3 |    1.8 |         3.2 |       1.1 |       2.5 |    4.7 |    3.5 |      4.5 | Broda      |
+| 13802 | Wiktor     | Banas           |        1.9 |    4.4 |         4.1 |       3.1 |       5.1 |    3.2 |    3.7 |        6 | Komar      |
+| 13803 | Janusz     | zelazny         |        1.5 |    2.7 |         5.6 |       1.5 |       4.4 |    2.3 |    5.9 |      4.1 | Stalone    |
+| 13804 | Stefan     | Kabaj           |        3.9 |    1.4 |         3.6 |       5.3 |       4.4 |    5.3 |    5.4 |      3.8 | Kot        |
+| 13805 | Zygmunt    | Nowak           |        5.6 |    2.3 |         5.3 |       3.7 |       1.1 |    5.5 |    4.7 |      4.5 | Jakubowski |
+| 13806 | Alina      | Siwy            |        3.3 |    4.7 |           5 |         4 |       2.8 |    3.9 |    5.9 |      4.8 | Koba       |
+| 13807 | Monika     | Czarnek         |        5.6 |    1.9 |         3.6 |         4 |       2.7 |      3 |    5.6 |      1.4 | Armatys    |
+| 13808 | Jan        | Czarnek         |        1.1 |    3.6 |         3.5 |       1.5 |       5.8 |    5.1 |    4.2 |      1.5 | Kret       |
+| 13809 | Jan        | Zagrodzki       |        5.1 |    1.3 |         2.4 |       3.1 |       3.7 |    2.6 |    4.3 |      1.1 | Koza       |
+| 13810 | Feliks     | Bialy           |        4.8 |    3.6 |         5.2 |       5.3 |       1.4 |    3.4 |    3.4 |      5.2 | zbik       |
+| 13811 | Cecylia    | Chrusciel       |          2 |    4.4 |         4.9 |       1.6 |       5.1 |    2.5 |    1.9 |      1.6 | Molenda    |
+| 13812 | Iwona      | Madej           |        4.4 |    2.9 |         4.3 |       4.7 |       3.2 |    5.1 |    5.4 |      2.6 | Baran      |
+| 13813 | Zygmunt    | Kot             |        5.9 |      6 |           6 |       5.9 |         6 |    5.7 |      5 |        5 | Wegier     |
+| 13814 | Michal     | Roczniak        |        2.8 |    5.1 |         1.9 |       2.9 |       5.6 |    2.3 |    3.1 |      2.2 | Stalone    |
+| 13815 | Witold     | Piatkowski      |          3 |    2.5 |         5.9 |       1.5 |       3.1 |    3.4 |    1.3 |      1.8 | Agat       |
+| 13816 | Maciej     | Zagrodzki       |          2 |      5 |         3.8 |       2.4 |       3.6 |    1.7 |    3.3 |      1.6 | Bialy      |
+| 13817 | Piotr      | Siemieszko      |        2.3 |    2.9 |         2.1 |       2.9 |       3.3 |    1.5 |    2.1 |      4.1 | zbik       |
+| 13818 | Justyna    | Wlodarczyk      |        1.3 |    5.3 |         1.9 |         4 |       1.1 |    2.6 |    4.5 |        2 | Ospala     |
+| 13819 | Ewa        | Belczyk         |        5.5 |    5.6 |         3.4 |       2.1 |       1.3 |    4.5 |    2.8 |      2.9 | Sek        |
+| 13820 | Marcin     | Czarnek         |        1.5 |    1.6 |         4.9 |         2 |       5.6 |    3.8 |    3.8 |      3.6 | Baj        |
+| 13821 | Tomasz     | Chrusciel       |        1.8 |    5.6 |         1.1 |       3.9 |       1.2 |    4.6 |    2.7 |      2.9 | Wilk       |
+| 13822 | Maciej     | Niemiec         |        1.4 |      6 |         4.6 |       2.9 |       5.2 |    5.5 |      1 |      1.5 | Muryn      |
+| 13823 | Michal     | Gadek           |        3.1 |      5 |         5.9 |       3.4 |         5 |    1.8 |    3.2 |      2.7 | Molenda    |
+| 13824 | Maciej     | Lencznarowicz   |        2.7 |    1.1 |         4.1 |       2.9 |       1.1 |    1.5 |    1.4 |      2.4 | Jung       |
+| 13825 | Michal     | Czarnek         |        4.8 |    4.6 |         2.4 |       1.1 |       3.5 |    4.5 |    3.3 |      2.5 | Molenda    |
+| 13826 | Przemyslaw | Siemieszko      |        2.6 |    1.1 |         4.4 |       3.2 |       1.2 |      4 |    5.2 |      1.1 | Niemiec    |
+| 13827 | Krystyna   | Kalita          |        3.1 |    1.5 |         2.6 |       4.5 |         4 |    5.1 |    2.5 |        6 | Samson     |
+| 13828 | Jan        | Witkowski       |        3.1 |    1.4 |         1.9 |       5.6 |       4.5 |    1.7 |    1.4 |      4.1 | Sek        |
+| 13829 | Alina      | Wronka          |          6 |    3.3 |         3.4 |       4.8 |       1.2 |    2.9 |    5.7 |      2.3 | Pies       |
+| 13830 | Iwona      | Kot             |        1.1 |    5.1 |         5.8 |       5.6 |       5.3 |    4.1 |    5.4 |      5.1 | Bialy      |
+| 13831 | Cecylia    | Slomski         |        2.5 |    3.4 |         1.3 |         5 |       4.7 |    2.5 |    5.2 |      1.8 | Zieba      |
+| 13832 | Janusz     | Swiatek         |        2.8 |    2.5 |         1.8 |       2.5 |       3.2 |    5.3 |    5.6 |      3.4 | Jakubowski |
+| 13833 | Feliks     | Wierzbicki      |          3 |    3.9 |         2.8 |       2.7 |       3.8 |    1.3 |      3 |      2.7 | Armatys    |
+| 13834 | Barbara    | Siwy            |        5.3 |      2 |         5.9 |       5.2 |       4.6 |    3.2 |    2.9 |        5 | sliwa      |
+| 13835 | Zygmunt    | Bialy           |        4.3 |    3.9 |         2.1 |         6 |       4.2 |    3.7 |    4.4 |      4.2 | Jung       |
+| 13836 | Krzysztof  | Malec           |        3.2 |    5.7 |         2.2 |       4.2 |       2.6 |    5.2 |    4.7 |      5.4 | sliwa      |
+| 13837 | Miroslawa  | Siemieszko      |        4.8 |    5.9 |         1.9 |       3.7 |       1.1 |    1.1 |    1.9 |      1.9 | Jasiek     |
+| 13838 | Iwona      | Szefer          |        2.1 |    3.9 |         5.1 |       4.4 |       1.3 |    4.4 |    3.2 |        5 | zbik       |
+| 13839 | Barbara    | Bialy           |        1.9 |    3.6 |         2.2 |       2.9 |       4.9 |    5.3 |    4.1 |      5.7 | Zdanowicz  |
+| 13840 | Alina      | Kot             |          4 |    4.8 |         3.7 |       2.1 |         5 |    4.9 |    5.3 |      5.6 | Piwko      |
+| 13841 | Stefan     | Majsak          |        1.8 |    4.5 |         5.5 |       2.4 |       3.2 |      5 |    1.5 |      5.7 | Sek        |
+| 13842 | Janusz     | Krupa           |        3.4 |    2.2 |         4.6 |       5.1 |       1.9 |    3.4 |    5.7 |      3.7 | Grodecki   |
+| 13843 | Jan        | Lumielski       |        4.2 |    2.3 |         1.7 |       1.4 |       4.1 |    2.4 |    3.5 |      3.7 | Piwko      |
+| 13844 | Anna       | Szostak         |        5.6 |    4.6 |         4.7 |       1.5 |       3.7 |    2.7 |      3 |      1.7 | Zawada     |
+| 13845 | Slawa      | Marek           |        1.2 |    3.1 |         5.4 |       5.9 |       5.6 |    2.3 |    3.4 |      5.7 | Godowski   |
+| 13846 | Marcelina  | Marek           |        5.1 |    2.1 |         2.1 |       4.2 |       4.9 |    3.8 |    3.8 |        6 | Jung       |
+| 13847 | Anna       | Kolodziejczyk   |        1.6 |    1.5 |         2.6 |       2.9 |       1.7 |    2.3 |    1.5 |      1.8 | Maciarz    |
+| 13848 | Anna       | Szczesna        |        4.2 |    2.3 |         2.2 |       3.8 |       1.3 |    4.4 |    2.2 |      4.9 | Kret       |
+| 13849 | Maciej     | Sliwa           |        1.6 |    5.8 |           3 |         5 |       4.9 |    4.1 |    5.3 |      1.9 | Wegier     |
+| 13850 | Dorota     | Kot             |        3.8 |    5.3 |         4.6 |       4.1 |       5.9 |    5.9 |    1.6 |      5.2 | Muryn      |
+| 13851 | Jaroslaw   | Marek           |        5.4 |    5.2 |         4.5 |         4 |       3.6 |    1.5 |    4.1 |      3.3 | Stalone    |
+| 13852 | Michal     | Zagrodzki       |        3.9 |    4.4 |         1.8 |       1.6 |       3.3 |    1.4 |    5.6 |      2.9 | Niemiec    |
+| 13853 | Marcin     | Zieba           |        5.6 |    1.1 |         2.2 |       5.2 |       4.5 |    5.6 |    5.2 |      2.7 | Molenda    |
+| 13854 | Michalina  | Mateszew        |        4.6 |    1.5 |         4.4 |       3.2 |       3.8 |    2.5 |    2.3 |      3.1 | Siema      |
+| 13855 | Anna       | Bros            |        5.9 |    1.6 |         3.4 |       5.9 |       1.6 |    5.1 |    5.2 |      4.9 | Jakubowski |
+| 13856 | Cecylia    | Szczesna        |        5.5 |      2 |         2.2 |       1.6 |       1.2 |    5.2 |    3.3 |      4.9 | Baj        |
+| 13857 | Krzysztof  | Kot             |        3.8 |      6 |         3.7 |       4.6 |       4.2 |    3.5 |    5.8 |      5.4 | Bialy      |
+| 13858 | Barbara    | Policht         |        1.6 |    5.4 |         4.4 |       4.8 |       3.9 |    3.2 |      2 |      2.7 | Kowal      |
+| 13859 | Miroslawa  | Kulaj           |          5 |    4.3 |         5.1 |       1.6 |       4.9 |    4.3 |    1.9 |        3 | sliwa      |
+| 13860 | Jan        | Bialy           |        2.6 |    5.2 |         5.4 |       2.7 |       5.4 |    3.4 |    3.5 |      2.6 | Rusek      |
+| 13861 | Iwona      | Taczuk          |        1.7 |    3.7 |         5.4 |       5.4 |       2.8 |    5.8 |    2.4 |        1 | Gruszka    |
+| 13862 | Jan        | Czarnek         |        5.6 |      5 |         1.3 |       2.1 |       4.5 |    3.6 |    3.8 |      1.5 | Godowski   |
+| 13863 | Boleslaw   | Marek           |        4.7 |    2.5 |         3.1 |       4.4 |       5.3 |    5.3 |      4 |        3 | Sewiolo    |
+| 13864 | Feliks     | lapka           |        1.3 |    5.1 |         1.1 |       4.3 |       5.8 |    2.3 |    5.5 |      4.9 | Komar      |
+| 13865 | Zygmunt    | Szczesny        |        2.1 |    1.4 |         5.8 |       5.8 |       2.2 |      2 |    1.6 |      4.7 | Komar      |
+| 13866 | Zygmunt    | Chrusciel       |        2.9 |    1.4 |         1.7 |       3.2 |       3.3 |    5.4 |    4.6 |      2.4 | Koza       |
+| 13867 | Stefan     | Kot             |        5.4 |    5.1 |           6 |       5.1 |       1.9 |    3.8 |    3.8 |      5.2 | Fasola     |
+| 13868 | Boleslaw   | Kozlowski       |        1.2 |    2.1 |         1.3 |       4.2 |       5.6 |    3.8 |    1.9 |      4.1 | Kot        |
+| 13869 | Feliks     | Osika           |          5 |    5.6 |         2.1 |       4.3 |       5.9 |    1.5 |    2.1 |      4.9 | Koza       |
+| 13870 | Iwona      | Bohosiewicz     |        4.3 |    1.6 |         3.4 |       2.3 |         1 |    2.8 |    1.2 |      3.5 | Rusek      |
+| 13871 | Marcin     | Szczesny        |        4.9 |    1.4 |         2.7 |       3.6 |       2.2 |    5.3 |    2.1 |      2.8 | Drobson    |
+| 13872 | Jan        | Zagrodzki       |        4.3 |    5.3 |         2.3 |       2.4 |       4.2 |    2.1 |    1.4 |      2.8 | sliwa      |
+| 13873 | Piotr      | Ospala          |        5.4 |    3.9 |         1.9 |       2.2 |       2.3 |    1.8 |    4.8 |        6 | Broda      |
+| 13874 | Renata     | Siwy            |        4.7 |    5.2 |         3.1 |       5.2 |         4 |    3.9 |    2.6 |      5.6 | sliwa      |
+| 13875 | Maciej     | Izdebska        |        1.7 |    4.9 |         3.4 |       1.2 |       2.4 |    4.6 |    4.7 |      2.2 | Czech      |
+| 13876 | Katarzyna  | Sliwka          |        1.3 |    4.9 |         3.9 |       1.4 |       5.9 |    3.3 |    2.7 |        5 | Grodecki   |
+| 13877 | Maciej     | Nowak           |        5.5 |      2 |         3.2 |       5.5 |       5.4 |    1.7 |    4.1 |      2.8 | Stalone    |
+| 13878 | Wawrzyniec | Czarnek         |        2.9 |    4.4 |         2.3 |       4.8 |       3.8 |    2.6 |    4.9 |      2.3 | Baran      |
+| 13879 | Agata      | Kozlowski       |        3.8 |    2.8 |         3.8 |       2.8 |       1.1 |    3.9 |    3.7 |      2.6 | Niemiec    |
+| 13880 | Marek      | Szczesny        |        2.5 |    4.9 |         1.7 |       2.1 |       2.3 |    3.9 |    3.2 |      5.1 | Kowal      |
+| 13881 | Ewa        | Kluta           |        5.2 |    1.6 |           4 |       4.5 |       5.7 |    5.5 |    1.3 |      2.5 | Czeresnia  |
+| 13882 | Iwona      | Ploszaj         |        2.1 |    3.4 |         3.1 |       5.6 |       3.6 |    3.5 |    3.9 |      1.4 | Jakubowski |
+| 13883 | Marcelina  | Kamisinski      |        4.8 |    3.8 |         3.5 |       1.1 |       1.2 |    4.5 |    2.6 |      1.6 | Zdanowicz  |
+| 13884 | Iwona      | Marek           |        4.8 |    4.2 |         5.4 |       5.7 |       3.7 |    4.8 |    2.3 |      1.8 | Kowal      |
+| 13885 | Monika     | Gasior          |        2.5 |    1.3 |         2.1 |       5.8 |       3.6 |    4.7 |    5.7 |        3 | Czech      |
+| 13886 | Monika     | Nowak           |        2.8 |    5.6 |         4.3 |       2.6 |       3.7 |    4.7 |    4.4 |      2.1 | Grodecki   |
+| 13887 | Iwona      | Zimirski        |        2.4 |    4.9 |         2.5 |       1.6 |       2.5 |    4.8 |    2.9 |      4.4 | Baran      |
+| 13888 | Miroslawa  | Szostek         |        1.7 |    5.1 |         4.5 |       2.2 |       2.9 |    2.6 |    5.4 |      2.9 | Kret       |
+| 13889 | Barbara    | zelazny         |        3.8 |      1 |         2.4 |       3.2 |       3.6 |    3.4 |    3.6 |      5.5 | Koza       |
+| 13890 | Janusz     | Siwy            |        1.4 |    4.2 |         4.8 |       3.6 |         6 |      5 |    2.9 |        6 | Pies       |
+| 13891 | Boleslaw   | Balwierz        |        1.8 |      1 |         4.9 |       1.2 |       5.1 |      5 |    2.3 |        4 | Grodecki   |
+| 13892 | Piotr      | Siemieszko      |          4 |    2.8 |         1.3 |       1.7 |       1.4 |    5.7 |    4.6 |      1.1 | Koza       |
+| 13893 | Roman      | Mika            |        5.4 |    5.6 |         3.8 |       1.6 |       2.1 |    5.5 |      5 |      5.7 | Pala       |
+| 13894 | Pawel      | Wnek            |        5.2 |    4.6 |         4.8 |       5.1 |       3.3 |    1.4 |    5.5 |      5.3 | Kowal      |
+| 13895 | Michal     | Sliwa           |        2.3 |    1.2 |         4.1 |       3.8 |       5.9 |    5.2 |    4.8 |        4 | Zdanowicz  |
+| 13896 | Roman      | Marek           |        3.7 |    3.6 |         4.7 |       3.1 |       5.6 |    4.8 |    1.8 |      5.3 | Drobson    |
+| 13897 | Marcin     | Nowak           |        3.6 |    5.7 |         3.9 |         3 |       2.1 |    3.6 |    4.3 |        5 | Pies       |
+| 13898 | Krzysztof  | Kot             |        5.9 |    3.1 |         3.8 |       5.5 |       5.8 |    5.3 |    4.5 |      2.2 | Wegier     |
+| 13899 | Piotr      | Marek           |        1.7 |    1.5 |         4.3 |         5 |       3.1 |    5.6 |    5.5 |      5.9 | Krakowski  |
+| 13900 | Jan        | Siwy            |        5.9 |    4.6 |         5.5 |       1.8 |       5.9 |      1 |    4.8 |      4.4 | Sek        |
+| 13901 | Bartlomiej | Zawada          |        2.4 |    2.8 |         2.5 |       5.8 |       5.6 |    4.4 |    1.5 |      3.9 | Sek        |
+| 13902 | Malgorzata | Kania           |        2.4 |    1.8 |         5.3 |       3.9 |       4.2 |    5.3 |    5.6 |        4 | Blachy     |
+| 13903 | Robert     | Marek           |        4.4 |    1.6 |         4.6 |       4.3 |       3.3 |    2.9 |    5.4 |      5.7 | Drobson    |
+| 13904 | Marek      | Stec            |        2.9 |    2.6 |         1.6 |       5.9 |       4.7 |    5.1 |    5.6 |      5.6 | Czech      |
+| 13905 | Maria      | Oles            |        4.2 |    5.8 |         4.7 |       1.3 |       5.9 |    2.7 |    4.6 |      5.7 | Komar      |
+| 13906 | Karol      | Rogoz           |        2.9 |    4.8 |           4 |       3.6 |       5.4 |    4.3 |    5.4 |      1.1 | Jung       |
+| 13907 | Patryk     | Chudzik         |        1.5 |    3.3 |         2.6 |       4.9 |       4.1 |      4 |    4.9 |        1 | Ospala     |
+| 13908 | Waldemar   | Kot             |        5.2 |    4.7 |         5.6 |       5.1 |         5 |    4.9 |    5.3 |      2.9 | Zawada     |
+| 13909 | Agnieszka  | Zawada          |        2.3 |    3.4 |         5.3 |       5.9 |       2.8 |    3.5 |    1.1 |      5.2 | Kowal      |
+| 13910 | Agnieszka  | Nowak           |        3.9 |      5 |         4.1 |       5.8 |       5.7 |    4.1 |    1.5 |      2.8 | Grodecki   |
+| 13911 | Alina      | Augustynska     |          3 |      2 |         4.3 |       2.1 |       1.8 |    1.6 |    3.1 |      2.1 | Pala       |
+| 13912 | Stefan     | Zawada          |        5.1 |    1.2 |         3.8 |       5.5 |       3.8 |    2.7 |    3.9 |      2.8 | Siema      |
+| 13913 | Feliks     | Zawada          |        4.3 |      5 |           2 |       1.6 |         3 |    1.8 |    5.9 |      4.9 | Molenda    |
+| 13914 | Zygmunt    | Siemieszko      |          3 |    3.4 |           1 |       2.4 |       1.9 |    4.2 |    1.1 |      5.5 | Armatys    |
+| 13915 | Monika     | Zagrodzki       |        1.5 |    1.7 |         4.1 |       2.7 |       1.4 |    5.5 |    2.4 |      4.6 | Gruszka    |
+| 13916 | Krzysztof  | Marek           |        5.3 |    3.9 |         4.7 |       1.7 |       3.4 |    2.7 |    4.3 |      4.6 | Maciarz    |
+| 13917 | Janusz     | Nowak           |        1.2 |    3.9 |         4.9 |       3.2 |       5.4 |      3 |    4.5 |      4.9 | Zieba      |
+| 13918 | Boleslaw   | Zawada          |          2 |    2.1 |         5.3 |       4.9 |       1.5 |    3.5 |    5.8 |      4.2 | Lesiak     |
+| 13919 | Feliks     | lapka           |        3.4 |    1.8 |         3.9 |       5.9 |         3 |    2.8 |      5 |      5.4 | Czech      |
+| 13920 | Iwona      | Iwo             |        4.1 |    5.5 |         4.2 |       3.7 |       4.5 |    4.6 |    4.8 |      4.8 | Jung       |
+| 13921 | Feliks     | Szmigielska     |        2.4 |      6 |           1 |       3.9 |       2.6 |    1.2 |    1.9 |      1.9 | Jung       |
+| 13922 | Jan        | Zawada          |        2.7 |    3.9 |           5 |       3.1 |       1.2 |    4.9 |    4.3 |      4.7 | Wegier     |
+| 13923 | Feliks     | Chrusciel       |        3.2 |      3 |         5.1 |       2.9 |       1.3 |    4.5 |    1.1 |      3.3 | Wegier     |
+| 13924 | Boleslaw   | Nowak           |        2.4 |    2.8 |         3.4 |       3.6 |         5 |    5.7 |      5 |      2.7 | Sewiolo    |
+| 13925 | Zygmunt    | zelazny         |        1.3 |    1.4 |         5.5 |       3.7 |       5.7 |    3.1 |    1.9 |      5.1 | Pies       |
+| 13926 | Jan        | Molenda         |        2.5 |    4.2 |           5 |         5 |       5.8 |    1.2 |    1.1 |      2.8 | Czeresnia  |
+| 13927 | Michal     | Mazur           |        4.9 |    1.3 |         4.8 |       4.7 |       3.7 |    5.2 |    3.7 |      2.3 | sliwa      |
+| 13928 | Wiktor     | Kot             |        5.4 |    3.7 |         5.3 |       4.8 |       1.7 |    3.8 |    5.8 |      5.8 | Jakubowski |
+| 13929 | Szczepan   | Sobota          |        4.2 |    5.1 |         2.6 |       2.2 |         3 |    5.2 |    5.5 |      1.3 | Sek        |
+| 13930 | Grzegorz   | Wasielak        |        3.5 |    4.8 |         2.4 |       5.3 |       2.7 |    2.9 |    3.1 |      1.5 | Godowski   |
+| 13931 | Piotr      | Czarnek         |        4.5 |    1.4 |         3.1 |       3.2 |       5.1 |    2.7 |    4.3 |      2.2 | Siema      |
+| 13932 | Krzysztof  | Klos            |        4.6 |    4.9 |         5.9 |       3.5 |       5.4 |    3.4 |      3 |      3.1 | Siema      |
+| 13933 | Jacek      | Boduch          |        2.5 |    5.7 |         5.7 |       3.6 |         1 |    3.1 |    1.1 |      5.7 | Siwy       |
+| 13934 | Anna       | Siemieszko      |        3.3 |      3 |         2.1 |       5.7 |       1.1 |    1.8 |    2.3 |        2 | Baj        |
+| 13935 | Filip      | Siemieszko      |        1.7 |    2.8 |         1.8 |       5.9 |       1.2 |    1.4 |    5.5 |      2.5 | Maciarz    |
+| 13936 | Piotr      | Pyla            |        2.3 |    4.8 |         5.8 |       4.8 |       3.5 |      5 |    2.3 |      5.5 | Czech      |
+| 13937 | Anna       | Dudzinski       |          2 |      3 |         1.9 |       4.7 |       4.8 |      2 |    4.6 |      1.6 | Siema      |
+| 13938 | Dominika   | Molenda         |        3.7 |    5.6 |         3.6 |       1.6 |       1.1 |    2.2 |    3.7 |      5.8 | Bialy      |
+| 13939 | Jakub      | Molenda         |        1.7 |    4.7 |         4.2 |       5.5 |       4.2 |    2.2 |    1.9 |      2.6 | Kowal      |
+| 13940 | Aleksandra | Gruca           |        3.2 |    3.8 |         3.6 |       2.4 |       3.9 |    5.7 |    4.3 |      3.1 | Komar      |
+| 13941 | Katarzyna  | Bednarczyk      |        3.8 |    1.4 |         1.8 |       3.3 |       4.2 |    1.4 |      3 |      4.2 | Stalone    |
+| 13942 | Marcelina  | Molenda         |        5.6 |    3.9 |         5.2 |       1.8 |       1.6 |    5.6 |    2.6 |      1.1 | Mleczko    |
+| 13943 | Konstanty  | Nowak           |          2 |    4.8 |         2.6 |       5.3 |       4.6 |    1.1 |    5.9 |      5.5 | Baj        |
+| 13944 | Miroslawa  | zelazny         |        1.1 |    4.7 |         1.1 |       2.2 |       5.5 |    3.4 |    2.8 |      5.9 | Siwy       |
+| 13945 | Wiktor     | Pasieka         |        2.7 |    5.9 |         2.9 |       1.6 |       3.4 |    2.2 |    4.6 |      4.5 | Broda      |
+| 13946 | Wiktor     | zelazny         |          5 |      3 |         4.2 |       4.6 |       1.7 |    1.5 |    4.9 |      2.1 | Wegier     |
+| 13947 | Alina      | Szatylowicz     |        2.2 |    1.7 |         5.1 |       1.4 |       2.5 |    2.5 |    1.5 |      3.9 | Gruszka    |
+| 13948 | Jan        | Dudek           |        4.2 |    2.7 |         4.7 |       5.7 |       4.4 |      4 |    4.7 |        1 | Stalone    |
+| 13949 | Cecylia    | Nowak           |        4.3 |    3.7 |         3.4 |       5.4 |       3.1 |      5 |      4 |      3.8 | Drobson    |
+| 13950 | Barbara    | Bialy           |        3.4 |    3.9 |         1.4 |       4.1 |       2.7 |    5.9 |    5.1 |      3.7 | Pies       |
+| 13951 | Alina      | Winogrodzki     |        1.3 |    2.8 |           3 |       3.2 |       1.4 |    1.3 |    2.2 |      5.6 | Zawada     |
+| 13952 | Monika     | Zawada          |        2.9 |    1.5 |         4.1 |       4.2 |         2 |    3.9 |    5.4 |      4.9 | Komar      |
+| 13953 | Zygmunt    | Szczesny        |        5.9 |    1.2 |         4.3 |       2.4 |       3.4 |      2 |    4.1 |      2.4 | Armatys    |
+| 13954 | Iwona      | lapka           |        4.5 |    5.5 |         4.5 |       4.1 |       4.1 |    2.2 |    1.2 |      4.4 | Koza       |
+| 13955 | Iwona      | zelazny         |        2.1 |      4 |         3.9 |       5.5 |       2.3 |    1.2 |    3.4 |      4.3 | sliwa      |
+| 13956 | Miroslawa  | lapka           |        2.4 |    5.2 |         2.6 |       2.1 |       4.3 |    5.8 |    5.3 |      4.1 | Koba       |
+| 13957 | Boleslaw   | Marek           |        2.6 |    5.1 |         2.3 |       3.9 |       1.2 |    5.4 |    5.7 |      4.1 | Samson     |
+| 13958 | Krzysztof  | Szczesny        |        2.2 |    5.1 |         1.6 |       3.2 |       2.3 |    1.2 |    4.5 |      5.7 | Siwy       |
+| 13959 | Wiktor     | Famielec        |        2.7 |    1.8 |         2.6 |       3.5 |       1.4 |    5.1 |    4.5 |      3.6 | Jakubowski |
+| 13960 | Sebastian  | Pawlik          |        2.3 |      5 |         5.7 |       3.2 |       3.7 |    2.7 |    1.1 |      5.3 | Jasiek     |
+| 13961 | Rafal      | Chrusciel       |        4.8 |    1.3 |         1.6 |       1.2 |       2.1 |    5.1 |    3.3 |      5.4 | Gruszka    |
+| 13962 | Katarzyna  | Slabiak         |        1.6 |    4.8 |         1.1 |       3.3 |       3.1 |    4.7 |    3.9 |      4.7 | Drobson    |
+| 13963 | Maciej     | Orlowska        |          1 |    5.8 |           4 |       5.3 |       2.7 |    3.2 |      2 |        1 | Piwko      |
+| 13964 | Jakub      | Bialy           |        3.7 |    4.1 |         4.4 |       4.6 |       4.8 |    5.2 |    2.8 |      2.5 | Piwko      |
+| 13965 | Pawel      | Kot             |        3.2 |    5.7 |           5 |       3.4 |       4.5 |    5.7 |      3 |      5.9 | Stalone    |
+| 13966 | Katarzyna  | Zimny           |        3.9 |    4.4 |         1.2 |       3.9 |       5.1 |    5.9 |    5.9 |        3 | Piwko      |
+| 13967 | Jakub      | Eminowicz       |        3.2 |      2 |         2.4 |       3.3 |       2.6 |    5.4 |    2.5 |      2.3 | Baran      |
+| 13968 | Szymon     | Nowak           |          4 |    4.2 |         2.2 |       1.9 |       5.3 |    3.9 |    4.3 |      5.7 | Baran      |
+| 13969 | Pawel      | Trzebiatowski   |        1.6 |    3.1 |         1.4 |         1 |       2.1 |    1.2 |    3.8 |        2 | Kret       |
+| 13970 | Wojciech   | Gwizdz          |        2.8 |    4.6 |           2 |       2.7 |       5.4 |    3.3 |    5.8 |      2.8 | Kowal      |
+| 13971 | Agata      | Bobrowski       |        3.5 |    5.2 |         1.5 |       3.7 |       2.5 |      2 |      4 |      1.5 | Wegier     |
+| 13972 | Barbara    | Szczesna        |        3.6 |    1.3 |         1.3 |       3.3 |       4.6 |    2.8 |    5.5 |      2.7 | Ospala     |
+| 13973 | Jan        | Musiewicz       |        1.4 |    1.5 |         5.5 |       2.5 |       2.5 |    1.7 |    3.7 |      5.8 | Lesiak     |
+| 13974 | Jan        | Czarnek         |        2.9 |    2.1 |         5.9 |       4.5 |       5.6 |    1.3 |    2.6 |      3.2 | sliwa      |
+| 13975 | Stefan     | Piekarz         |        3.2 |    3.6 |         2.9 |       4.1 |       4.6 |    4.6 |    1.5 |      3.4 | Jung       |
+| 13976 | Stefan     | Bialy           |        2.3 |    4.6 |         3.8 |       3.3 |       4.5 |    3.8 |      5 |      4.1 | Grodecki   |
+| 13977 | Boleslaw   | Rojek           |        2.3 |    3.4 |           5 |         2 |         3 |    3.7 |      5 |      5.8 | Lesiak     |
+| 13978 | Miroslawa  | Nowak           |          3 |    5.3 |         4.9 |       2.4 |       4.3 |    4.1 |    4.2 |      2.8 | Agat       |
+| 13979 | Janusz     | Kolek           |        3.1 |    5.7 |         4.8 |       1.3 |       4.9 |    2.7 |      5 |      4.1 | Molenda    |
+| 13980 | Jan        | Gawron          |        5.5 |      4 |         2.3 |       4.5 |         3 |    2.9 |    4.8 |      1.7 | Maciarz    |
+| 13981 | Iwona      | Zawada          |        3.2 |    3.4 |         5.1 |       4.4 |       3.2 |    1.3 |      4 |      3.8 | Sewiolo    |
+| 13982 | Krzysztof  | Wojtas          |        3.8 |    3.1 |         4.8 |         5 |       4.7 |    2.8 |    2.7 |      2.9 | Jung       |
+| 13983 | Wiktor     | Taczuk          |        3.3 |    5.8 |         4.8 |       5.4 |         3 |    1.5 |    4.5 |      1.3 | Molenda    |
+| 13984 | Michal     | Szczesny        |        1.6 |    2.1 |         5.1 |       3.5 |       4.9 |    3.8 |    1.5 |      2.8 | Lesiak     |
+| 13985 | Joanna     | Stypula         |        3.7 |    1.5 |         4.5 |       2.6 |       1.3 |    5.5 |    5.5 |      1.6 | Sek        |
+| 13986 | Karolina   | lapka           |        1.1 |    4.9 |         3.4 |       5.4 |       4.4 |    5.8 |    2.7 |      4.9 | Blachy     |
+| 13987 | Barbara    | lapka           |        3.7 |    4.9 |         5.5 |         3 |       1.4 |    5.4 |    5.4 |      2.9 | Krakowski  |
+| 13988 | Marek      | Molenda         |        2.1 |    4.1 |         5.5 |       2.1 |       2.8 |    5.8 |    3.7 |      1.1 | Baran      |
+| 13989 | Marcin     | Ogrodniczak     |        1.8 |    1.1 |         2.3 |       1.2 |       2.2 |    5.6 |    3.4 |      3.1 | Wilk       |
+| 13990 | Izabela    | Lechowska       |        3.2 |    2.4 |           5 |       2.9 |       1.8 |    2.1 |      1 |        5 | Kot        |
+| 13991 | Joanna     | Bialy           |          4 |    4.4 |         3.7 |       4.4 |       1.5 |    3.7 |    4.6 |      3.9 | Drobson    |
+| 13992 | Katarzyna  | Zajonc          |          4 |    2.4 |         5.5 |       1.5 |       2.2 |    3.5 |    4.9 |      4.5 | Samson     |
+| 13993 | Agata      | Jasinski        |        4.2 |    4.4 |         3.2 |       2.2 |       2.9 |    1.5 |    3.4 |      4.4 | Rusek      |
+| 13994 | Magdalena  | Chrusciel       |        3.6 |    2.3 |         2.2 |       2.1 |       2.8 |    5.2 |    1.8 |        4 | Krakowski  |
+| 13995 | Magdalena  | Leszczynski     |        2.5 |      3 |         2.1 |       4.5 |       3.3 |    1.4 |    1.3 |      1.6 | Wegier     |
+| 13996 | Iwona      | Toton           |        4.2 |    4.7 |         5.5 |         3 |       3.2 |    2.9 |    2.4 |      4.3 | sliwa      |
+| 13997 | Monika     | Ospala          |        4.8 |    1.6 |           5 |       1.9 |       2.1 |    3.9 |    4.4 |      4.7 | Kowal      |
+| 13998 | Zygmunt    | Bialy           |        2.6 |    1.9 |         4.5 |       5.3 |       3.7 |      6 |    3.6 |      2.5 | Zdanowicz  |
+| 13999 | Stefan     | Pajak           |        4.5 |    3.1 |         4.3 |       5.3 |       5.3 |    2.9 |    3.1 |      2.3 | Kot        |
+| 14000 | Iwona      | Szybowski       |          1 |    2.9 |         1.8 |       2.5 |       4.5 |    1.7 |      5 |      4.1 | Zdanowicz  |
+| 14001 | Stefan     | Borowicz        |        1.1 |    5.6 |         1.8 |       3.8 |         3 |    5.7 |    2.7 |      2.3 | Pala       |
+| 14002 | Monika     | Muszynska       |        2.6 |    3.1 |         2.7 |       4.1 |       1.4 |    1.6 |    2.9 |      5.5 | Stalone    |
+| 14003 | Miroslawa  | Wiensak         |        1.8 |    5.2 |         2.3 |       2.5 |       5.7 |    1.8 |    2.6 |      4.6 | Godowski   |
+| 14004 | Miroslawa  | zelazny         |        1.1 |    1.5 |         5.1 |       1.9 |       5.5 |      5 |      4 |      3.8 | Kowal      |
+| 14005 | Boleslaw   | Siemieszko      |        3.4 |      1 |         3.5 |       1.8 |       2.9 |    5.7 |    2.4 |      2.2 | Rusek      |
+| 14006 | Iwona      | Cieslik         |        3.4 |    2.2 |         5.7 |       1.9 |       2.6 |    1.2 |    4.2 |      5.8 | Stalone    |
+| 14007 | Iwona      | Broniek         |        2.9 |    4.4 |         1.9 |       5.2 |       2.2 |    1.9 |    3.4 |      5.9 | Blachy     |
+| 14008 | lukasz     | Molenda         |        3.1 |    5.6 |         1.4 |       2.3 |       2.7 |    5.4 |    1.5 |      4.7 | Godowski   |
+| 14009 | Jan        | Jasinski        |        2.6 |    2.4 |         2.1 |       5.2 |       5.9 |    2.2 |    2.9 |      2.1 | Jung       |
+| 14010 | Dominik    | zelazny         |        1.4 |    5.8 |         3.5 |       5.4 |       2.3 |    3.2 |    1.9 |      3.4 | Bialy      |
+| 14011 | Wojciech   | Kobus           |        5.5 |    4.1 |         3.5 |       5.6 |       5.6 |    2.1 |    2.6 |      1.4 | Broda      |
+| 14012 | Pawel      | Nowak           |        3.2 |      3 |         5.2 |       4.4 |         4 |      2 |    5.5 |      5.9 | Koba       |
+| 14013 | Rafal      | Wrobel          |        1.4 |    4.2 |         5.2 |       4.7 |       3.8 |    5.8 |    2.4 |      1.8 | Wegier     |
+| 14014 | Teresa     | Basista         |        3.1 |    3.5 |         2.6 |       5.7 |       1.1 |    3.2 |    4.9 |        3 | Kowal      |
+| 14015 | Agnieszka  | Butscher        |        2.8 |    2.6 |         1.1 |       2.6 |       5.4 |      4 |    1.8 |      4.9 | Drobson    |
+| 14016 | Karol      | Nowak           |        4.9 |    1.5 |         4.5 |       4.4 |       5.8 |    5.2 |    1.8 |      3.6 | Pala       |
+| 14017 | Helena     | Siemieszko      |        2.7 |    1.3 |         4.9 |       3.1 |       2.3 |    1.7 |    3.8 |      2.9 | Sek        |
+| 14018 | Paulina    | Kucharski       |        3.8 |    2.4 |         3.6 |       4.3 |       1.8 |    4.7 |    3.2 |      1.2 | Kot        |
+| 14019 | Kamila     | Chrusciel       |        4.1 |    5.1 |         1.7 |       3.6 |         3 |      4 |    1.3 |      1.6 | Armatys    |
+| 14020 | Aleksandra | Kot             |        5.8 |      6 |         5.6 |       1.9 |       5.2 |    2.2 |      4 |      4.9 | Jakubowski |
+| 14021 | Miroslawa  | Siuta           |        5.4 |    4.7 |         1.6 |       4.2 |       5.6 |    4.8 |    4.5 |      2.1 | Zieba      |
+| 14022 | Alina      | Cwik            |        1.5 |    5.9 |         5.1 |       4.1 |       5.7 |    4.8 |    3.6 |      2.7 | Molenda    |
+| 14023 | Barbara    | Chrusciel       |        4.6 |    1.3 |         5.4 |         3 |       2.4 |    1.9 |    1.9 |      4.1 | Baran      |
+| 14024 | Monika     | Marek           |        4.9 |    5.2 |         3.1 |       5.1 |         2 |    3.9 |    4.7 |      4.3 | Kret       |
+| 14025 | Janusz     | Witkowska       |        2.6 |    1.2 |         3.8 |       5.1 |       1.4 |    2.3 |    4.4 |        4 | Mleczko    |
+| 14026 | Krzysztof  | Marek           |        5.8 |    4.1 |         2.4 |       3.8 |       2.9 |    4.6 |    5.7 |      2.1 | Broda      |
+| 14027 | Feliks     | Banas           |        4.4 |    3.5 |         5.7 |       5.6 |       4.6 |    2.5 |    5.3 |      1.3 | Kret       |
+| 14028 | Cecylia    | Kot             |        5.1 |    2.8 |           5 |       5.6 |       4.7 |    5.9 |    4.5 |      5.6 | Stalone    |
+| 14029 | Monika     | Trzopek         |        3.4 |    2.8 |         1.8 |       4.4 |       4.5 |    4.5 |    3.3 |      2.9 | Zawada     |
+| 14030 | Maciej     | Siwy            |        4.4 |    3.4 |         4.6 |       4.6 |       1.9 |    5.2 |    4.4 |      4.9 | Molenda    |
+| 14031 | Maciej     | Zawada          |        5.4 |    3.2 |         1.7 |       5.1 |       1.7 |      5 |    3.4 |      2.9 | Czech      |
+| 14032 | Maciej     | Zagrodzki       |        4.5 |    2.8 |         2.3 |       3.3 |       2.9 |    2.5 |    3.3 |      2.7 | Stalone    |
+| 14033 | Urszula    | Bialic          |        5.9 |    4.5 |         5.5 |       2.2 |       2.8 |    1.7 |    2.1 |      3.9 | Muryn      |
+| 14034 | lukasz     | Siemieszko      |        5.2 |    3.1 |         2.7 |       2.4 |       4.6 |    1.8 |    1.4 |      1.9 | Armatys    |
+| 14035 | Dorota     | Siemieszko      |        1.7 |    4.6 |         3.1 |       1.7 |       1.3 |    2.5 |    3.3 |      3.6 | Pala       |
+| 14036 | Izabela    | Zagrodzki       |        1.2 |    1.2 |           1 |       4.8 |       5.2 |      5 |    3.2 |      1.9 | Koza       |
+| 14037 | Anna       | zelazny         |        5.8 |    5.5 |         1.9 |         2 |       2.1 |    4.2 |    3.6 |      2.1 | Gruszka    |
+| 14038 | Radoslaw   | Zietara         |        4.5 |    5.4 |         2.1 |       2.1 |       5.6 |    1.5 |    4.4 |      1.9 | Muryn      |
+| 14039 | Barbara    | Molenda         |        3.1 |    5.5 |           5 |       1.7 |       2.8 |    5.5 |    2.5 |      1.5 | Blachy     |
+| 14040 | Maciej     | Seruga          |        3.2 |    1.4 |         3.1 |       5.1 |       1.1 |      6 |    4.3 |      4.8 | Siwy       |
+| 14041 | Anna       | Brodowicz       |        2.1 |    3.6 |         2.5 |         2 |       3.9 |    1.4 |    3.4 |      5.4 | Mleczko    |
+| 14042 | Maciej     | Olek            |        5.5 |    2.8 |         3.5 |       4.5 |       1.7 |      5 |    5.1 |      5.6 | Molenda    |
+| 14043 | Magdalena  | Depinska        |        5.8 |      5 |         2.2 |       3.8 |         1 |    3.6 |    1.1 |      3.1 | Gruszka    |
+| 14044 | Karolina   | Nucinska        |          5 |    3.1 |         1.6 |       1.7 |       3.1 |    5.4 |    2.3 |      3.2 | Kowal      |
+| 14045 | Tina       | Marek           |        2.3 |      1 |         5.7 |         6 |       5.7 |      4 |    2.8 |      3.3 | Lesiak     |
+| 14046 | Jan        | Jakobik         |        1.1 |    4.1 |         2.5 |         5 |       5.5 |      1 |    5.1 |      2.5 | Sewiolo    |
+| 14047 | Cecylia    | lapka           |        1.7 |    5.7 |         4.3 |       2.3 |       3.7 |    3.4 |    5.1 |      5.4 | Sek        |
+| 14048 | Zygmunt    | Torba           |        1.9 |    3.8 |         4.1 |       3.5 |       5.7 |    5.7 |    4.8 |      2.7 | Samson     |
+| 14049 | Cecylia    | Rudnicki        |        1.9 |    4.2 |         1.6 |         4 |       3.7 |      4 |    3.4 |      2.6 | Kowal      |
+| 14050 | Wiktor     | Ludwin          |        2.6 |    5.9 |         1.9 |       5.7 |       2.3 |    2.8 |    4.1 |      2.9 | Mleczko    |
+| 14051 | Cecylia    | Daria           |        3.1 |    2.2 |         2.4 |       5.9 |         4 |    5.8 |    5.4 |      4.4 | sliwa      |
+| 14052 | Boleslaw   | Bialy           |        2.9 |    4.1 |         5.7 |       3.2 |       5.3 |    3.4 |    1.3 |      4.2 | Siwy       |
+| 14053 | Stefan     | Krzysztofinski  |          1 |    1.3 |         2.3 |       1.3 |       1.7 |    1.1 |    1.2 |        2 | Wegier     |
+| 14054 | Wiktor     | lapka           |        4.4 |      3 |         3.2 |       5.7 |       3.2 |    1.8 |    5.4 |        4 | Niemiec    |
+| 14055 | Janusz     | zelazny         |        1.6 |      5 |         4.9 |         4 |       2.3 |    2.8 |    4.2 |      3.3 | Czech      |
+| 14056 | Alina      | Ospala          |        2.3 |    4.1 |         3.8 |       3.9 |       5.6 |    2.5 |    4.4 |      1.8 | Siema      |
+| 14057 | Monika     | Szczesna        |        1.3 |    5.1 |         1.1 |       5.2 |       1.6 |    5.7 |    2.7 |      2.8 | Agat       |
+| 14058 | Boleslaw   | Misiuda         |        4.3 |    2.8 |         4.8 |       3.8 |       3.5 |    2.5 |      3 |      1.9 | Grodecki   |
+| 14059 | Iwona      | Gurba           |        5.9 |    5.3 |         1.3 |       5.7 |         5 |    5.1 |    1.7 |      3.1 | Siwy       |
+| 14060 | Tomasz     | Kot             |        2.7 |    3.9 |         4.2 |       5.1 |       4.7 |    5.4 |    4.1 |      5.3 | Kowal      |
+| 14061 | Piotr      | Kosek           |        3.1 |    4.8 |         4.8 |       5.3 |       4.8 |    3.3 |    3.4 |      1.4 | Pala       |
+| 14062 | Leszek     | Szczesny        |        4.1 |    5.6 |         2.7 |       3.6 |       3.5 |    1.3 |      2 |      2.9 | Zdanowicz  |
+| 14063 | Dagmara    | Ospala          |        4.1 |    2.6 |         3.2 |       4.5 |       4.3 |    3.5 |    3.4 |      3.8 | Piwko      |
+| 14064 | Magdalena  | Sobolewska      |        1.2 |    3.3 |         4.7 |       2.9 |       1.8 |    2.2 |      3 |      3.2 | Siema      |
+| 14065 | Magdalena  | Sroka           |        5.5 |    1.3 |         4.3 |       5.3 |       4.3 |    4.3 |    3.4 |      4.4 | Koza       |
+| 14066 | Agnieszka  | Nowak           |        4.8 |      2 |         5.7 |       2.1 |       4.8 |    3.4 |    5.4 |      3.9 | Molenda    |
+| 14067 | Tomasz     | Marek           |        2.8 |    4.1 |         2.9 |       5.2 |       5.5 |    1.9 |    4.6 |      5.1 | Komar      |
+| 14068 | Agnieszka  | Michaliszyn     |          4 |    2.9 |         1.1 |       2.8 |       1.5 |    1.3 |    5.1 |      2.4 | Godowski   |
+| 14069 | Gabriela   | Drahus          |        4.3 |    5.1 |         1.6 |       1.4 |       3.8 |    3.3 |    4.2 |      5.8 | Zdanowicz  |
+| 14070 | Teresa     | Dolny           |        4.2 |    5.1 |         1.6 |       2.5 |       3.7 |    5.1 |    5.1 |      5.7 | Blachy     |
+| 14071 | Dariusz    | Zagrodzki       |        3.7 |    4.9 |         1.4 |       3.3 |       2.7 |    2.9 |    3.3 |      1.4 | Sewiolo    |
+| 14072 | Paulina    | Malecka         |        3.5 |    1.5 |         2.7 |       2.9 |       3.8 |    4.6 |    3.5 |      3.9 | Sek        |
+| 14073 | Joanna     | Hajto           |        4.4 |    3.3 |         5.9 |       2.2 |       3.4 |    5.9 |    2.3 |      2.9 | Siwy       |
+| 14074 | Janusz     | Zawada          |        1.9 |    5.5 |         3.8 |       1.4 |       3.2 |    4.5 |    3.7 |      4.5 | Pala       |
+| 14075 | Monika     | Grzesiak        |        2.7 |    4.3 |         5.1 |       4.8 |       3.3 |    1.8 |    1.3 |      2.3 | Rusek      |
+| 14076 | Cecylia    | Janus           |        3.8 |      5 |         2.2 |       4.5 |       4.5 |    5.3 |    2.8 |        3 | Blachy     |
+| 14077 | Cecylia    | Chrusciel       |        3.8 |      1 |         3.7 |       3.1 |         3 |    1.7 |      3 |      5.3 | Baj        |
+| 14078 | Boleslaw   | Dospial         |        5.7 |    2.8 |         4.1 |       4.7 |       1.4 |    3.6 |    1.2 |      2.9 | Stalone    |
+| 14079 | Janusz     | Zagrodzki       |        2.4 |    1.6 |         4.3 |       5.4 |         3 |    1.4 |    2.7 |        4 | Mleczko    |
+| 14080 | Krzysztof  | Kraj            |        2.1 |    3.9 |           6 |       3.2 |       3.2 |    5.8 |    4.6 |      5.4 | Niemiec    |
+| 14081 | Monika     | Turczyk         |        2.8 |    1.7 |         3.5 |       4.5 |         3 |    3.6 |    2.4 |      5.3 | Kowal      |
+| 14082 | Jan        | Siwy            |        3.8 |    4.5 |         5.7 |       2.5 |       4.8 |    4.1 |    3.8 |      4.3 | Bialy      |
+| 14083 | Monika     | Miskowiec       |        3.1 |    4.8 |         1.4 |       2.2 |       2.5 |    3.7 |    4.1 |      3.1 | Fasola     |
+| 14084 | Boleslaw   | Chrusciel       |        1.2 |    1.7 |         2.7 |       4.1 |       1.8 |    5.2 |    3.8 |      4.2 | Kowal      |
+| 14085 | Cecylia    | Marek           |        4.3 |    2.6 |         4.8 |       5.1 |       1.3 |    3.5 |    5.1 |      3.8 | Armatys    |
+| 14086 | Wiktor     | Madrzyk         |        1.6 |    4.8 |         4.8 |       5.7 |       1.4 |    1.1 |    4.8 |      3.2 | Gruszka    |
+| 14087 | Feliks     | Zawada          |        3.7 |    5.5 |         5.9 |       1.1 |       2.9 |    4.3 |    1.5 |      4.2 | Drobson    |
+| 14088 | lukasz     | Kania           |        3.6 |      5 |         2.9 |       4.6 |       2.1 |    5.5 |    3.8 |      3.4 | Baj        |
+| 14089 | Aleksandra | Tokarz          |        2.5 |    4.7 |         5.2 |       1.4 |         4 |    5.7 |    1.9 |        3 | Niemiec    |
+| 14090 | Stefania   | Michta          |        3.7 |    5.8 |         2.6 |         2 |       1.8 |    2.7 |    5.2 |      4.9 | Godowski   |
+| 14091 | Marta      | Palka           |        5.3 |    1.1 |         5.2 |       4.3 |       4.5 |    5.3 |    4.3 |      2.9 | Komar      |
+| 14092 | Jakub      | Kwater          |        5.5 |    4.2 |         3.4 |       1.8 |       3.2 |    1.5 |    4.4 |      4.4 | Jung       |
+| 14093 | Krzysztof  | Siemieszko      |        4.6 |    2.9 |         2.6 |       1.8 |       2.2 |      5 |    1.6 |      2.2 | Zieba      |
+| 14094 | Malgorzata | Kot             |        5.9 |    2.1 |         3.4 |       5.2 |       5.8 |    5.3 |    5.7 |      5.5 | Zawada     |
+| 14095 | Magdalena  | Chrusciel       |          2 |    2.8 |         4.1 |       5.3 |       2.4 |    4.2 |    1.5 |      1.1 | Baj        |
+| 14096 | Jakub      | Zawada          |        5.6 |      4 |         4.5 |       2.6 |       5.8 |    2.2 |    1.5 |      2.5 | Zawada     |
+| 14097 | Piotr      | Zapala          |        1.5 |    4.4 |         5.5 |       2.2 |       1.2 |    4.3 |    5.4 |      3.9 | Komar      |
+| 14098 | Jolanta    | Kucma           |        3.8 |    5.9 |         4.4 |       2.9 |       3.6 |    2.6 |    5.7 |      3.8 | Zdanowicz  |
+| 14099 | Aleksander | zelazny         |        3.3 |    3.2 |         5.4 |       3.3 |       2.6 |    2.1 |    2.5 |      5.3 | Gruszka    |
+| 14100 | Bartlomiej | Maslowski       |        4.3 |    2.6 |         2.1 |       3.6 |       1.9 |    1.1 |    5.7 |      2.5 | sliwa      |
+| 14101 | Urszula    | Macieik         |        3.9 |    1.9 |         4.5 |       4.4 |       2.9 |    2.2 |    1.5 |        6 | Piwko      |
+| 14102 | Marta      | Wojtowicz       |        4.3 |    1.2 |         2.3 |       1.9 |       4.5 |    2.9 |    2.9 |      3.7 | Samson     |
+| 14103 | Kamil      | Czarnek         |          3 |    1.3 |           4 |       4.2 |       5.1 |    1.9 |    5.7 |      2.6 | Kowal      |
+| 14104 | Szymon     | Oliwa           |        5.3 |    4.8 |         5.1 |       2.6 |       4.9 |    3.1 |    3.6 |      2.6 | Baj        |
+| 14105 | Michal     | Czarnek         |        5.9 |    2.1 |         5.7 |         3 |         3 |    1.5 |    5.1 |      1.1 | Ospala     |
+| 14106 | Elzbieta   | Nowak           |        2.9 |    1.4 |         4.8 |         5 |       5.3 |    5.5 |      3 |      3.4 | Kowal      |
+| 14107 | Maria      | Mojsa           |        5.1 |    1.8 |         3.9 |       4.9 |         2 |    2.5 |    5.5 |      4.5 | Krakowski  |
+| 14108 | Feliks     | Bialy           |          2 |    5.4 |         2.2 |       3.1 |       5.4 |    5.4 |    4.1 |      2.7 | Zawada     |
+| 14109 | Miroslawa  | Michalek        |        1.7 |    3.5 |         1.4 |       3.6 |       5.2 |    2.6 |    3.6 |      3.9 | Gruszka    |
+| 14110 | Janusz     | lapka           |        4.5 |    3.7 |         5.6 |         3 |       3.2 |    2.1 |    5.3 |      5.3 | Kowal      |
+| 14111 | Boleslaw   | lapka           |        5.9 |    2.6 |         4.7 |         4 |       3.7 |    1.8 |    4.5 |      3.9 | Maciarz    |
+| 14112 | Miroslawa  | Stankiewicz     |        2.5 |    1.2 |         1.4 |       1.8 |       4.8 |    4.2 |    1.8 |      1.9 | sliwa      |
+| 14113 | Monika     | Mizianty        |        4.4 |    2.4 |         1.1 |         4 |         3 |    3.2 |    4.4 |      2.9 | Stalone    |
+| 14114 | Miroslawa  | Szczesna        |        1.5 |    5.7 |         4.4 |       2.6 |         2 |      2 |    2.5 |      4.4 | Gruszka    |
+| 14115 | Feliks     | Molenda         |        3.5 |    4.2 |         1.4 |       2.3 |       3.2 |    4.3 |      2 |      5.8 | Godowski   |
+| 14116 | Jan        | Ospala          |        3.3 |      4 |         3.8 |       5.7 |       4.2 |    2.9 |    2.2 |      2.2 | Zdanowicz  |
+| 14117 | Monika     | lapka           |        5.5 |    5.6 |         3.1 |       2.8 |       5.2 |    4.3 |    2.9 |      2.4 | Siwy       |
+| 14118 | Cecylia    | Zagorski        |        1.4 |    3.2 |         4.2 |       4.2 |         2 |      5 |    2.5 |      2.5 | Niemiec    |
+| 14119 | Boleslaw   | Szczesny        |        2.6 |      2 |         5.4 |       2.2 |       5.1 |    3.7 |    2.6 |      1.9 | Agat       |
+| 14120 | Miroslawa  | Szczesna        |        2.5 |    4.5 |         2.8 |       2.5 |       4.5 |    1.5 |    3.2 |      4.1 | Sewiolo    |
+| 14121 | Feliks     | Bialy           |        5.9 |      2 |         3.7 |       4.5 |       4.5 |    1.2 |    4.8 |      5.3 | Maciarz    |
+| 14122 | Janusz     | Nowak           |        5.3 |    2.1 |         2.9 |       1.4 |       4.5 |    5.8 |      5 |      3.2 | Kret       |
+| 14123 | Jakub      | Siemieszko      |        1.7 |    1.5 |         1.8 |       1.6 |       2.3 |    2.5 |    4.9 |      5.9 | Piwko      |
+| 14124 | Piotr      | Szczesny        |        5.5 |    3.6 |         5.5 |       2.6 |         2 |    2.9 |    1.9 |      1.7 | Jung       |
+| 14125 | Tomasz     | Kot             |        5.2 |    4.5 |         4.4 |       4.2 |       2.4 |    5.9 |    5.7 |      5.2 | Zieba      |
+| 14126 | Sebastian  | Siemieszko      |        4.8 |    1.3 |         1.9 |       5.2 |       2.5 |    1.5 |    3.1 |      2.8 | Zawada     |
+| 14127 | Tomasz     | Szczepankiewicz |        1.2 |    1.7 |         1.5 |       1.3 |         2 |    1.4 |    1.3 |        1 | Grodecki   |
+| 14128 | Piotr      | Niechaj         |        4.3 |    2.1 |         1.7 |       4.7 |       5.9 |    5.6 |    1.2 |      2.6 | Zieba      |
+| 14129 | Jan        | Chrusciel       |        1.9 |    1.8 |         2.5 |       3.9 |       2.2 |    4.6 |    2.3 |      4.9 | Fasola     |
+| 14130 | Anna       | Marek           |        2.5 |    5.5 |           5 |       2.5 |       5.6 |    1.5 |    4.3 |      4.9 | Broda      |
+| 14131 | Anna       | Molenda         |        3.5 |    2.6 |         5.7 |         2 |       3.7 |    3.3 |    2.8 |      4.5 | Pies       |
+| 14132 | Pawel      | Marek           |        3.6 |    1.6 |         5.5 |       4.9 |       5.9 |    1.8 |    2.6 |      5.8 | Stalone    |
+| 14133 | Paula      | Nowak           |        5.4 |    1.2 |         3.5 |       2.5 |         6 |    4.7 |    1.9 |      5.3 | Kret       |
+| 14134 | Piotr      | Mackiewicz      |        1.4 |    4.4 |         1.2 |       4.5 |       1.2 |    1.5 |    4.1 |      3.8 | Siwy       |
+| 14135 | Anna       | Trzmiel         |        2.4 |    3.9 |         5.5 |       3.8 |       1.4 |    4.3 |    2.6 |      2.3 | Armatys    |
+| 14136 | Jan        | Dec             |          5 |    5.8 |         5.5 |       5.2 |         4 |    3.8 |    2.3 |      4.9 | Zawada     |
+| 14137 | Janusz     | Ostachowicz     |        1.6 |    1.3 |         2.6 |         2 |       3.9 |    3.5 |    2.1 |      2.9 | Ospala     |
+| 14138 | Miroslawa  | Siemieszko      |        3.4 |    4.4 |         3.1 |       1.1 |       2.7 |    1.1 |    5.5 |      1.2 | Ospala     |
+| 14139 | Jan        | Nowak           |          5 |    4.9 |         1.8 |       5.1 |       4.6 |      2 |    4.4 |      3.2 | Gruszka    |
+| 14140 | Cecylia    | Czarnik         |        1.8 |      3 |         3.6 |       4.6 |       1.7 |    3.2 |    3.4 |      5.3 | Jung       |
+| 14141 | Monika     | Szczesna        |        3.6 |    2.8 |         1.1 |       4.8 |       1.6 |    4.8 |    1.6 |      5.6 | Fasola     |
+| 14142 | Jan        | Wasik           |        5.1 |    2.2 |         3.4 |       2.8 |       5.3 |    4.6 |    2.7 |      4.5 | Baran      |
+| 14143 | Wiktor     | Czarnek         |        5.6 |    3.8 |         1.3 |       2.9 |         3 |    2.4 |    2.9 |      5.5 | Bialy      |
+| 14144 | Krzysztof  | Zajac           |        3.3 |      6 |         3.4 |       4.3 |       4.8 |    4.2 |    1.8 |      2.6 | Siema      |
+| 14145 | Krzysztof  | Chrusciel       |        2.3 |      3 |         1.6 |       1.3 |       5.2 |    3.9 |    4.7 |      2.4 | Sewiolo    |
+| 14146 | Zygmunt    | Zagrodzki       |        1.5 |    2.7 |         2.2 |       1.7 |       5.2 |    4.8 |      1 |      4.7 | Komar      |
+| 14147 | Alina      | Cabaj           |        4.3 |    5.5 |         2.1 |       3.4 |       3.6 |    5.6 |    4.9 |      3.6 | Blachy     |
+| 14148 | Anna       | Kryszkiewicz    |        2.6 |    1.9 |         3.4 |       1.3 |       3.5 |    1.9 |      1 |      2.5 | Czech      |
+| 14149 | Wojciech   | Kot             |        5.1 |    5.2 |         3.9 |       5.2 |       1.5 |    5.4 |    5.7 |      4.5 | Ospala     |
+| 14150 | Pawel      | Wilczek         |        1.3 |    5.5 |         2.2 |       3.3 |       4.4 |    3.9 |    4.6 |      2.5 | Godowski   |
+| 14151 | Anna       | Grabska         |        2.3 |    4.7 |         1.2 |       5.3 |       4.7 |    1.1 |      5 |      2.3 | Mleczko    |
+| 14152 | Natalia    | Cichon          |        3.8 |    4.9 |         3.5 |       1.7 |         6 |    2.6 |    5.5 |      1.3 | Kowal      |
+| 14153 | Monika     | Zawada          |        5.6 |    4.8 |         1.8 |       3.8 |       3.2 |    3.2 |    1.5 |      5.7 | Mleczko    |
+| 14154 | Rafal      | Tomczyk         |          3 |    3.9 |           3 |       3.2 |       5.3 |    4.1 |    1.6 |      3.7 | Lesiak     |
+| 14155 | Michal     | Szczesny        |        5.8 |    2.9 |         1.7 |       1.8 |       1.4 |    2.8 |    5.4 |      3.5 | Agat       |
+| 14156 | Beata      | Molenda         |        4.6 |      2 |         2.1 |       2.2 |       5.6 |    3.9 |    4.7 |      2.2 | Kret       |
+| 14157 | Magdalena  | Kajda           |        3.4 |    4.5 |         2.5 |       4.2 |       5.4 |    4.3 |    4.5 |      2.4 | Samson     |
+| 14158 | Anna       | Sitko           |        2.8 |    5.5 |         4.6 |       4.3 |       2.9 |    4.1 |    4.3 |      4.8 | Komar      |
+| 14159 | Nadia      | Bialy           |        2.3 |    5.3 |         1.4 |       4.8 |         5 |    1.8 |    3.5 |      5.8 | Koba       |
+| 14160 | Karolina   | Swierk          |        4.1 |      3 |         3.5 |       3.7 |       3.4 |    2.9 |      5 |      2.8 | Blachy     |
+| 14161 | Agnieszka  | Nowak           |        1.8 |    5.1 |         3.6 |       4.1 |       1.1 |    5.4 |    4.7 |      5.9 | Ospala     |
+| 14162 | Marek      | Czubak          |        5.1 |    4.9 |         2.8 |       3.2 |       1.7 |    4.3 |      5 |      2.7 | Muryn      |
+| 14163 | Boleslaw   | Szczepaniec     |        2.1 |    1.9 |         1.8 |       1.6 |       5.6 |    1.3 |    4.1 |      2.3 | Pies       |
+| 14164 | Wiktor     | Siwy            |        5.9 |    5.1 |         5.5 |       3.5 |       4.2 |    3.6 |    1.4 |      5.1 | Jasiek     |
+| 14165 | Miroslawa  | Brozek          |        3.5 |    3.8 |         3.1 |       3.9 |       4.5 |    2.1 |    5.8 |      2.9 | sliwa      |
+| 14166 | Jan        | Szczesny        |        4.9 |    3.2 |         5.7 |       2.4 |       2.3 |    1.3 |    1.3 |      3.9 | Baj        |
+| 14167 | Miroslawa  | Nowak           |        2.1 |    2.3 |         3.9 |       3.6 |       5.7 |    2.3 |    5.3 |      5.9 | Niemiec    |
+| 14168 | Barbara    | Joanna          |        4.4 |    4.2 |         5.3 |       4.1 |       1.8 |    3.5 |    2.9 |        2 | Muryn      |
+| 14169 | Janusz     | Swiderska       |        4.7 |    1.2 |         5.2 |       2.5 |       2.5 |    2.9 |    2.6 |      3.1 | Broda      |
+| 14170 | Krzysztof  | Pohorecka       |        5.9 |    3.6 |         1.5 |       2.6 |       1.3 |    5.5 |    1.7 |      2.5 | Fasola     |
+| 14171 | Feliks     | Mach            |        3.4 |    4.2 |         3.6 |       5.8 |       5.7 |    3.5 |    5.9 |        3 | Czeresnia  |
+| 14172 | Feliks     | Peszt           |        5.3 |    4.1 |         4.8 |       1.6 |       3.6 |    5.8 |    3.4 |      3.8 | Kot        |
+| 14173 | Stefan     | Siwy            |        3.3 |    3.7 |         5.5 |       5.7 |       4.3 |    3.7 |    2.8 |      4.4 | Piwko      |
+| 14174 | Krzysztof  | Siwy            |        5.9 |    2.5 |         5.5 |       5.6 |       2.5 |    5.2 |    3.5 |      3.9 | Sewiolo    |
+| 14175 | Jan        | Ospala          |        4.3 |    1.3 |           2 |       5.3 |       4.8 |    4.4 |    1.9 |      4.7 | Piwko      |
+| 14176 | Jan        | Malczyk         |        1.6 |    4.6 |         5.4 |       1.6 |       1.9 |    2.8 |      3 |      5.6 | Kret       |
+| 14177 | Monika     | zelazny         |        4.1 |    4.3 |         1.2 |       3.6 |       4.6 |    4.1 |    1.9 |      3.8 | Jasiek     |
+| 14178 | Zygmunt    | Klucinska       |        1.2 |    5.4 |         1.9 |       4.2 |       1.4 |    4.8 |    1.2 |      4.3 | Armatys    |
+| 14179 | Grzegorz   | Urbaniec        |          3 |    2.3 |         3.6 |       1.5 |       5.4 |    2.4 |    1.1 |      5.7 | Wegier     |
+| 14180 | Agnieszka  | Marek           |        4.4 |    3.9 |         3.2 |       2.4 |       2.6 |    5.9 |    5.4 |      5.5 | Bialy      |
+| 14181 | Dorota     | Statkiewicz     |        3.1 |    2.5 |         4.7 |       2.2 |       1.7 |    1.1 |    2.1 |      2.6 | Agat       |
+| 14182 | Michal     | Mardosz         |        1.5 |    4.4 |         3.5 |       1.5 |       2.1 |    5.7 |    5.9 |        3 | Godowski   |
+| 14183 | Marcin     | Radecka         |        2.7 |    5.1 |           5 |       1.3 |       1.5 |    1.3 |    5.7 |      5.3 | Mleczko    |
+| 14184 | Bartlomiej | Zawada          |        5.1 |    5.3 |         5.5 |         5 |       3.4 |    1.1 |      3 |      1.3 | Gruszka    |
+| 14185 | Michal     | Marek           |        5.7 |    1.2 |         4.9 |       5.5 |       3.1 |    5.5 |    4.8 |      1.3 | Kowal      |
+| 14186 | Maria      | Nowak           |        1.5 |    4.7 |         4.4 |       3.3 |       2.3 |    4.3 |    5.4 |      5.5 | Wilk       |
+| 14187 | Joanna     | Szczesna        |        2.5 |    1.5 |         5.3 |       2.3 |       1.7 |    4.4 |    3.8 |      3.8 | Krakowski  |
+| 14188 | Stefan     | lapka           |        3.4 |    3.7 |         5.5 |       3.6 |       4.6 |    5.2 |    2.3 |      1.6 | Armatys    |
+| 14189 | Jan        | Siwy            |          4 |    2.9 |         4.9 |       5.6 |       4.8 |    4.5 |    5.4 |      1.4 | Grodecki   |
+| 14190 | Monika     | Ospala          |        4.1 |    1.5 |           4 |         1 |       4.9 |    5.1 |    4.1 |      4.6 | sliwa      |
+| 14191 | Boleslaw   | Kurek           |        4.3 |      3 |         4.1 |       3.5 |       1.2 |    3.8 |    5.4 |        5 | Armatys    |
+| 14192 | Boleslaw   | Kmiec           |        3.9 |    2.6 |         2.7 |       4.6 |       2.7 |    5.4 |    4.8 |      4.5 | Kowal      |
+| 14193 | Wiktor     | Kolodziejczyk   |        3.9 |    2.5 |         1.4 |       2.2 |       2.3 |    2.1 |      1 |      1.4 | Pala       |
+| 14194 | Janusz     | Siwy            |          5 |    5.2 |         4.2 |       1.4 |       5.3 |    4.6 |      5 |      3.1 | Krakowski  |
+| 14195 | Barbara    | Czarnek         |        5.7 |    5.8 |         1.8 |       5.3 |       1.1 |    3.1 |    1.1 |      4.1 | Kowal      |
+| 14196 | Jan        | Siemieszko      |        2.3 |    4.8 |           1 |       2.5 |       1.9 |    4.3 |      4 |      1.5 | Agat       |
+| 14197 | Feliks     | Sokolowski      |        2.6 |    1.8 |         4.1 |       1.5 |       3.7 |    1.6 |    4.5 |      2.2 | Siema      |
+| 14198 | Stefan     | Marek           |          5 |    2.8 |         5.5 |       1.2 |       3.9 |    4.2 |    5.7 |      4.7 | Kowal      |
+| 14199 | Stefan     | Tokarski        |        3.7 |      4 |         2.5 |       4.1 |       3.8 |      3 |    1.8 |      2.3 | Sewiolo    |
+| 14200 | Iwona      | Siemieszko      |        2.7 |      3 |         2.1 |       5.6 |       4.4 |    1.1 |      1 |      3.3 | Niemiec    |
+| 14201 | Feliks     | Kot             |        5.3 |      4 |         4.4 |       2.1 |       5.7 |    4.6 |    5.9 |      5.1 | Kowal      |
+| 14202 | Janusz     | Bialy           |        5.3 |      2 |         5.6 |       2.9 |       4.6 |    2.2 |    3.2 |      4.2 | Czech      |
+| 14203 | Cecylia    | Czarnek         |        2.1 |    4.5 |           4 |       3.9 |       3.8 |    2.3 |    3.4 |      2.3 | Zawada     |
+| 14204 | Boleslaw   | Czarnek         |        2.5 |    1.2 |         2.7 |         5 |       5.2 |    4.2 |    5.1 |      1.8 | Blachy     |
+| 14205 | Monika     | Golec           |        3.3 |    1.5 |         5.1 |       3.4 |       3.8 |    5.9 |      3 |      5.7 | Drobson    |
+| 14206 | Wojciech   | Czarnek         |        2.4 |    5.9 |         4.3 |       3.1 |       3.3 |    2.6 |    1.8 |      3.3 | Zieba      |
+| 14207 | Bogumil    | Chrusciel       |        1.9 |    2.6 |           5 |       2.3 |       2.6 |    3.3 |    3.8 |        3 | Broda      |
+| 14208 | Olga       | Kujdowicz       |        3.6 |    1.5 |         1.4 |       1.1 |       1.1 |    5.6 |    5.8 |      4.1 | Siwy       |
+| 14209 | Karolina   | Kwiecien        |        1.3 |    3.2 |         5.1 |       5.2 |       1.2 |    3.2 |    2.5 |      4.5 | Kot        |
+| 14210 | Anna       | lapka           |        3.8 |    3.1 |         2.5 |       5.5 |       5.9 |    4.5 |    3.1 |      2.5 | Jung       |
+| 14211 | Katarzyna  | Zawada          |        4.4 |    2.9 |         2.1 |       3.6 |       2.2 |    3.8 |    4.6 |      5.4 | Jakubowski |
+| 14212 | Marcin     | Chrusciel       |        1.7 |    3.6 |         3.4 |       2.3 |       4.6 |    2.6 |      1 |      4.5 | Wegier     |
+| 14213 | Katarzyna  | Kot             |          6 |    5.4 |         2.4 |       4.1 |       4.9 |    5.6 |    2.9 |      4.2 | Baj        |
+| 14214 | Parys      | Balas           |        2.2 |    4.8 |           3 |       5.2 |       4.2 |    2.1 |    4.8 |      4.8 | Drobson    |
+| 14215 | Wojciech   | Gad             |        5.1 |    2.8 |         4.8 |       3.2 |       5.9 |    5.7 |    2.9 |      5.6 | Koba       |
+| 14216 | Michal     | lapka           |        4.3 |    2.4 |         4.9 |       3.8 |       5.6 |    1.9 |    4.9 |      2.7 | Ospala     |
+| 14217 | Maciej     | Marek           |        4.5 |    1.4 |         5.8 |       3.2 |       5.5 |    1.3 |    5.4 |      5.4 | Sek        |
+| 14218 | Paulina    | Kot             |        5.4 |    4.6 |         4.4 |       5.4 |       5.6 |    3.4 |    3.6 |        4 | Jasiek     |
+| 14219 | Joanna     | Zawada          |        1.9 |    3.5 |         2.7 |       4.6 |       4.5 |    4.4 |    2.1 |      5.9 | Kot        |
+| 14220 | Krystian   | Stefaniak       |        2.3 |    4.2 |         1.4 |       3.9 |       5.5 |      1 |    1.5 |      4.7 | Zieba      |
+| 14221 | Aleksandra | Kramarczyk      |        1.1 |    3.1 |         3.8 |       1.6 |       1.1 |    3.9 |    3.1 |        4 | Maciarz    |
+| 14222 | Zygmunt    | Janeczek        |          1 |    4.4 |         1.6 |       2.8 |       4.3 |    3.3 |    5.6 |      2.8 | Piwko      |
+| 14223 | Zygmunt    | Rudnicka        |        1.2 |    1.6 |         3.4 |       3.1 |       2.1 |    3.3 |    5.8 |      5.7 | Baran      |
+| 14224 | Alina      | Augustynska     |        1.5 |    1.2 |         2.7 |       1.1 |         2 |    4.4 |    2.6 |      4.1 | Armatys    |
+| 14225 | Feliks     | Siemieszko      |          1 |      3 |         1.1 |       3.9 |       2.9 |    4.3 |    3.6 |      1.5 | Maciarz    |
+| 14226 | Stefan     | Zawada          |        3.4 |    1.2 |         2.1 |         4 |       1.7 |    5.6 |      6 |      5.2 | Pala       |
+| 14227 | Iwona      | Oles            |        5.7 |    2.2 |         4.6 |       2.6 |       5.8 |    4.2 |    3.8 |      5.2 | Ospala     |
+| 14228 | Iwona      | Bakowska        |        3.9 |    1.6 |         1.6 |       2.8 |       3.6 |      4 |    3.4 |      5.3 | Koza       |
+| 14229 | Jan        | Bialy           |        1.2 |    4.4 |         5.5 |       5.7 |       2.3 |    5.9 |    5.8 |      1.5 | Baran      |
+| 14230 | Monika     | Marek           |        5.8 |    3.8 |         4.3 |       4.9 |       2.5 |    1.2 |      5 |      5.2 | Kret       |
+| 14231 | Boleslaw   | Szczesny        |        2.1 |    5.5 |         3.4 |       1.6 |       5.4 |    1.2 |    3.6 |        3 | Siema      |
+| 14232 | Miroslawa  | Wojcik          |        5.2 |    5.5 |         1.7 |       4.7 |       5.7 |    2.1 |    2.6 |      2.1 | Ospala     |
+| 14233 | Alina      | Kolarz          |        4.9 |    4.6 |         4.2 |       3.2 |       2.2 |    3.9 |    3.2 |        3 | Fasola     |
+| 14234 | Janusz     | Szumylowicz     |        2.5 |    2.6 |         2.3 |       1.9 |       1.5 |    1.6 |    3.4 |      4.3 | Armatys    |
+| 14235 | Krzysztof  | Zagrodzki       |        3.9 |    1.2 |         3.7 |       1.3 |       3.3 |    4.4 |      3 |      3.2 | Muryn      |
+| 14236 | Stefan     | Bagsik          |        1.5 |    2.8 |         1.2 |       5.4 |       5.1 |    1.6 |    5.2 |      5.8 | Samson     |
+| 14237 | Jan        | Klimkiewicz     |        2.9 |      2 |         1.5 |       1.9 |       4.5 |    1.8 |    3.1 |      2.2 | Blachy     |
+| 14238 | Krzysztof  | Nowak           |        2.5 |    5.5 |         3.7 |       1.9 |       4.6 |    3.2 |      6 |      3.3 | Broda      |
+| 14239 | Feliks     | Godowski        |          6 |    1.5 |         4.2 |       2.1 |       3.1 |    5.5 |    1.6 |        2 | Krakowski  |
+| 14240 | Wojciech   | Dyrek           |        5.5 |    5.2 |         3.5 |       4.9 |       1.2 |    4.6 |    4.6 |      1.9 | Bialy      |
+| 14241 | Magdalena  | Molenda         |        4.7 |    1.8 |         4.2 |         5 |       3.1 |    5.4 |    1.2 |        2 | Sewiolo    |
+| 14242 | Jan        | Olszewski       |        1.8 |    1.4 |         3.5 |       3.2 |       4.1 |      5 |      2 |      2.5 | Bialy      |
+| 14243 | Andrzej    | Szydlak         |        4.1 |    1.6 |         5.6 |       4.4 |       4.4 |    1.8 |    2.9 |      1.8 | Molenda    |
+| 14244 | Artur      | Chechelski      |        3.8 |    4.5 |         1.6 |         2 |       4.1 |    1.3 |    1.7 |      4.1 | sliwa      |
+| 14245 | Sebastian  | Gryga           |        3.8 |      3 |         5.1 |       1.7 |       4.3 |    5.3 |    3.2 |      5.6 | Godowski   |
+| 14246 | Jacek      | Kolodziejczyk   |        2.5 |    1.1 |         1.6 |       1.9 |       2.3 |    1.9 |    4.2 |      1.1 | Agat       |
+| 14247 | Marcin     | Gora            |        4.7 |    3.5 |         5.8 |       3.7 |       3.2 |    5.7 |    3.6 |      4.5 | Mleczko    |
+| 14248 | Beata      | Zachorowska     |        1.9 |    2.8 |         4.2 |       2.5 |       1.6 |    4.5 |      2 |      1.5 | Bialy      |
+| 14249 | Patryk     | Malczyk         |        3.2 |    4.5 |         3.8 |       4.2 |         2 |    5.9 |    2.3 |      1.9 | Siwy       |
+| 14250 | Kamil      | Siemieszko      |        5.1 |    3.7 |         1.4 |       3.6 |       1.5 |    2.9 |    1.7 |      3.2 | Koba       |
+| 14251 | Michal     | Mis             |        5.6 |    4.6 |         5.2 |       4.8 |       1.3 |      5 |      5 |      4.8 | Armatys    |
+| 14252 | Anna       | lapka           |        2.3 |    5.1 |         4.1 |       3.9 |       5.1 |    3.6 |    1.6 |      5.5 | Piwko      |
+| 14253 | Adam       | Chrusciel       |        1.9 |    2.1 |         2.1 |       3.3 |       4.2 |    3.6 |    2.8 |        4 | Kret       |
+| 14254 | Justyna    | Szewczyk        |        2.7 |    2.6 |         1.6 |       3.8 |       5.2 |    3.1 |    3.2 |      3.4 | Rusek      |
+| 14255 | Jakub      | Chrusciel       |        1.5 |    2.8 |           6 |       2.7 |       2.7 |    2.2 |    3.2 |      2.9 | Zieba      |
+| 14256 | Anna       | Marek           |        5.7 |    1.8 |         3.9 |       4.7 |       5.1 |    4.2 |    1.8 |      3.6 | Piwko      |
+| 14257 | Cecylia    | Kaczmarczyk     |        1.4 |    3.1 |           3 |       1.8 |       4.6 |    3.5 |    1.2 |      1.5 | Molenda    |
+| 14258 | Krzysztof  | Szczesny        |        2.4 |    2.3 |         5.1 |       1.8 |       2.7 |    3.3 |    2.6 |      5.7 | Maciarz    |
+| 14259 | Feliks     | Czarnek         |          5 |      2 |           5 |       4.9 |         1 |    1.8 |    5.2 |      2.5 | Jasiek     |
+| 14260 | Boleslaw   | Siemieszko      |        2.1 |    1.7 |         2.2 |       4.1 |       1.1 |    5.7 |    1.8 |      2.9 | Agat       |
+| 14261 | Cecylia    | Nowak           |        4.8 |    4.1 |         3.8 |       5.5 |       5.4 |    4.6 |    2.4 |      2.7 | zbik       |
+| 14262 | Janusz     | Zagrodzki       |        4.5 |    1.3 |         3.8 |         1 |       1.2 |      5 |      4 |      3.6 | Agat       |
+| 14263 | Iwona      | Zawada          |        2.8 |    5.2 |         1.8 |       4.4 |       2.1 |    3.9 |    5.3 |      3.3 | Kowal      |
+| 14264 | Jan        | Piwowarczyk     |        4.1 |    1.3 |         2.7 |       1.8 |       3.5 |    1.3 |    2.4 |      2.7 | Lesiak     |
+| 14265 | Feliks     | Zagrodzki       |        1.4 |    4.1 |         2.6 |       3.9 |       1.9 |    5.3 |    3.4 |        2 | Gruszka    |
+| 14266 | Barbara    | Witkowska       |        4.2 |    5.8 |         3.9 |       2.7 |       3.4 |    1.6 |    1.2 |      1.5 | Niemiec    |
+| 14267 | Stefan     | Lepiarczyk      |          2 |    3.8 |         3.9 |       1.8 |       3.4 |    2.2 |    2.9 |      2.5 | zbik       |
+| 14268 | Krzysztof  | Siwy            |        4.3 |    3.6 |         2.5 |       4.9 |       4.5 |    5.6 |    3.8 |      4.9 | Czeresnia  |
+| 14269 | Krzysztof  | Zagrodzki       |        5.6 |    1.5 |         3.5 |         3 |       2.3 |      5 |    1.6 |      2.1 | Molenda    |
+| 14270 | Boleslaw   | Zagrodzki       |        1.6 |    5.3 |         4.1 |         5 |       2.2 |    1.5 |    3.1 |      1.6 | Kot        |
+| 14271 | Wiktor     | Biborski        |        1.6 |    2.2 |         2.8 |       2.6 |       3.3 |      3 |    5.5 |      4.6 | Czeresnia  |
+| 14272 | Janusz     | Chociej         |        1.2 |    5.1 |         1.9 |         4 |       5.8 |    3.7 |    3.1 |      2.3 | Drobson    |
+| 14273 | Zygmunt    | Langman         |          3 |    5.6 |         1.3 |       2.8 |       1.6 |    4.5 |    4.3 |      4.2 | Muryn      |
+| 14274 | Monika     | Kot             |        2.3 |      6 |         5.8 |       5.9 |       5.4 |      5 |    4.8 |      4.4 | Siwy       |
+| 14275 | Anna       | Bialy           |          5 |    3.5 |         1.3 |         4 |       3.5 |    5.9 |    3.8 |      5.7 | Jung       |
+| 14276 | Grzegorz   | Holda           |        4.6 |    1.5 |         4.5 |       3.7 |       3.7 |    3.7 |    3.8 |      5.5 | Czech      |
+| 14277 | Marcin     | Wroblewski      |        3.6 |      3 |         3.2 |       3.7 |         1 |    2.9 |    1.8 |      3.6 | Kret       |
+| 14278 | Sylwia     | lapka           |        3.3 |    3.4 |           5 |       1.1 |       5.1 |    5.7 |    2.9 |      5.4 | Czech      |
+| 14279 | Katarzyna  | Grzybowska      |          1 |    1.5 |         4.5 |         4 |       1.2 |    2.4 |    1.9 |      5.4 | Piwko      |
+| 14280 | Anna       | Ciaptacz        |        4.4 |    2.1 |         2.3 |       1.5 |       3.2 |    3.6 |    4.5 |        4 | Sek        |
+| 14281 | Michal     | Zagorski        |        2.7 |    3.6 |         3.8 |       2.9 |       1.8 |    4.9 |    2.4 |      3.3 | Piwko      |
+| 14282 | Mateusz    | Kotarba         |        2.4 |    3.4 |         3.1 |       1.8 |       4.4 |    3.5 |    4.9 |      3.8 | Blachy     |
+| 14283 | Amelia     | Nowak           |        4.1 |    3.1 |         4.7 |       4.8 |       2.5 |    5.7 |    3.8 |      3.4 | Siema      |
+| 14284 | Aleksandra | Molenda         |        4.9 |    1.6 |         4.7 |       3.3 |       4.1 |    1.2 |      4 |      2.6 | Grodecki   |
+| 14285 | Daniel     | Wilkosz         |        2.8 |    4.1 |         5.9 |       2.2 |       1.1 |      3 |    2.5 |      4.8 | Armatys    |
+| 14286 | Paulina    | Ospala          |        3.2 |    4.6 |         3.2 |         5 |       5.6 |    2.8 |    2.3 |      2.9 | Baran      |
+| 14287 | Katarzyna  | Nanus           |        1.4 |    2.4 |         3.5 |       5.8 |       5.3 |      5 |    3.8 |      4.3 | Baran      |
+| 14288 | Malgorzata | Szczesna        |        5.5 |    1.9 |         1.7 |       4.5 |       4.5 |    1.5 |    2.8 |      3.7 | Niemiec    |
+| 14289 | Stefan     | Adamczak        |        5.5 |    5.6 |         2.5 |       2.1 |       1.2 |    4.3 |    2.3 |      2.2 | Kowal      |
+| 14290 | Alina      | Skarbek         |        3.3 |    1.7 |         3.1 |       3.5 |       4.7 |    4.7 |      4 |      2.8 | Piwko      |
+| 14291 | Janusz     | Telejko         |        2.5 |    5.1 |         2.3 |       3.4 |       2.2 |    2.2 |    3.7 |      5.2 | Rusek      |
+| 14292 | Krzysztof  | Kowalski        |        4.8 |    2.9 |         4.5 |       1.9 |       4.3 |    1.8 |    2.5 |      2.4 | Godowski   |
+| 14293 | Iwona      | Augustynska     |          2 |    1.5 |         2.2 |       1.4 |       2.2 |    5.9 |      1 |      3.3 | Baj        |
+| 14294 | Stefan     | Molenda         |        4.5 |    2.4 |         2.1 |       3.3 |       1.1 |    5.9 |    3.8 |      3.6 | Kret       |
+| 14295 | Monika     | zelazny         |        3.3 |    4.2 |         3.9 |       2.4 |       1.4 |    2.5 |      5 |      4.9 | Ospala     |
+| 14296 | Cecylia    | Siwy            |        5.7 |    3.5 |         5.6 |       5.2 |         5 |    2.2 |    4.5 |        3 | Fasola     |
+| 14297 | Miroslawa  | Kot             |          6 |    5.9 |         5.3 |         6 |       5.8 |    5.7 |      6 |        6 | Piwko      |
+| 14298 | Grzegorz   | Maciarz         |        3.9 |    3.4 |         5.1 |       2.5 |       1.6 |    3.6 |    1.5 |      4.8 | Koza       |
+| 14299 | Joanna     | Siemieszko      |        4.1 |    5.4 |         2.8 |       1.3 |         1 |    2.1 |    3.4 |      1.8 | Maciarz    |
+| 14300 | Karolina   | Bachus          |        4.2 |    4.5 |         2.6 |       2.2 |       4.7 |    1.1 |    3.4 |      5.5 | Piwko      |
+| 14301 | Szymon     | Szczesny        |        5.5 |      2 |         2.8 |       1.8 |       4.2 |    3.5 |    2.1 |      3.6 | Pala       |
+| 14302 | lukasz     | Ponisz          |        1.8 |      2 |         5.6 |       2.8 |       5.1 |      4 |    5.1 |      3.1 | Kret       |
+| 14303 | Barbara    | Siwy            |        1.5 |    1.9 |         5.8 |         6 |       5.5 |      5 |    5.4 |      3.5 | Maciarz    |
+| 14304 | Karolina   | Czarnecki       |        3.8 |    5.1 |         2.4 |       1.1 |       2.1 |    1.9 |    3.8 |      3.2 | Pies       |
+| 14305 | Marcin     | Pyzik           |        1.9 |    4.9 |         4.3 |       4.1 |       5.5 |      4 |      1 |      5.3 | Fasola     |
+| 14306 | Antoni     | Kurowski        |        3.6 |    1.4 |         2.2 |         2 |       5.3 |    4.5 |    3.1 |      3.4 | Kowal      |
+| 14307 | Stefan     | Molenda         |        2.3 |    5.8 |         5.5 |       1.6 |         1 |    1.7 |    3.7 |      5.7 | Koza       |
+| 14308 | Cecylia    | Szczesna        |        2.3 |    1.2 |         2.8 |       3.2 |       3.7 |    2.4 |    4.5 |        5 | Krakowski  |
+| 14309 | Stefan     | Bernacki        |          1 |    5.7 |         3.4 |       3.6 |       5.7 |    1.4 |    1.5 |      3.8 | Jung       |
+| 14310 | Krzysztof  | Marzec          |        5.2 |      4 |         2.6 |       2.9 |       3.2 |    1.6 |    4.5 |      5.8 | Pala       |
+| 14311 | Jan        | Zawada          |        4.1 |    2.7 |         3.6 |       5.6 |       1.6 |    4.6 |    3.9 |      2.2 | Piwko      |
+| 14312 | Cecylia    | Chrusciel       |        4.3 |    4.9 |         1.2 |         1 |       3.5 |    3.4 |    2.2 |      3.4 | Jakubowski |
+| 14313 | Cecylia    | Janiga          |        2.9 |    4.5 |         5.5 |       3.7 |       4.9 |    1.6 |    1.5 |        4 | Koza       |
+| 14314 | Stefan     | Szczesny        |          3 |    3.5 |         1.4 |       3.5 |       4.3 |    5.4 |    2.3 |      2.1 | Mleczko    |
+| 14315 | Alina      | Chrusciel       |        1.9 |    2.6 |         3.8 |         4 |       1.4 |    1.2 |    4.9 |      4.9 | Piwko      |
+| 14316 | Janusz     | lapka           |        5.5 |    4.8 |         1.3 |       4.9 |       4.9 |    5.5 |    5.2 |      1.2 | Baj        |
+| 14317 | Iwona      | Wytwinowska     |        3.7 |    4.4 |         2.1 |       1.2 |       2.7 |    1.8 |    1.3 |      3.1 | Maciarz    |
+| 14318 | Michal     | Molenda         |        5.7 |    1.1 |         2.1 |       2.7 |       4.4 |    4.2 |    3.1 |      3.1 | Sek        |
+| 14319 | Jan        | Zawada          |        4.9 |    2.1 |         5.9 |       1.8 |       1.6 |      3 |    5.1 |      5.1 | Koba       |
+| 14320 | Tomasz     | Nowak           |        1.8 |    2.5 |         4.8 |         5 |       5.9 |    4.6 |    1.2 |      5.2 | Jakubowski |
+| 14321 | Maria      | Maczka          |        5.6 |    3.4 |         1.3 |       3.1 |       4.9 |    4.7 |    2.3 |      4.4 | Samson     |
+| 14322 | Rafal      | Zawada          |        4.7 |    2.2 |         3.2 |       4.5 |       1.3 |    4.6 |    3.2 |      5.7 | Siema      |
+| 14323 | Justyna    | Kadziola        |        1.5 |    3.7 |         4.7 |       2.4 |       1.4 |    4.9 |    2.6 |      4.2 | Broda      |
+| 14324 | Mariola    | Sawicka         |        5.8 |    1.6 |         3.8 |       2.3 |       1.9 |    5.8 |    1.7 |      3.4 | Rusek      |
+| 14325 | Aleksandra | Brzostek        |        2.3 |    3.4 |           2 |       3.9 |       5.3 |      3 |    2.6 |      3.7 | Niemiec    |
+| 14326 | Gabriela   | lapka           |          3 |    3.4 |         4.5 |       5.1 |       4.5 |      2 |    4.3 |      4.3 | Zawada     |
+| 14327 | Krzysztof  | Szczesny        |        3.1 |    1.3 |         2.6 |       2.2 |       5.3 |    4.5 |    1.8 |      4.7 | Jakubowski |
+| 14328 | Stefan     | Ospala          |        4.6 |    3.8 |         4.1 |       4.6 |         2 |    3.3 |    3.7 |      2.2 | sliwa      |
+| 14329 | Iwona      | Kalamar         |        4.1 |    2.3 |         3.2 |       5.7 |       2.3 |    4.1 |    2.3 |      3.2 | Jakubowski |
+| 14330 | Wiktor     | Blazowski       |        4.4 |    1.4 |         4.4 |       2.8 |         3 |    2.9 |    2.2 |      2.9 | Lesiak     |
+| 14331 | Cecylia    | Molenda         |        3.4 |    2.1 |         1.5 |       1.7 |       5.5 |    1.2 |    5.9 |      5.4 | Czeresnia  |
+| 14332 | Barbara    | Nowak           |        4.1 |    2.6 |         5.9 |       5.3 |       4.6 |    2.2 |    2.6 |      4.4 | Jakubowski |
+| 14333 | Janusz     | Kot             |          6 |    5.4 |         5.9 |         6 |       4.6 |    5.9 |    5.9 |      5.8 | Baran      |
+| 14334 | Feliks     | Czarnek         |        3.8 |    4.4 |         2.5 |       1.4 |       2.6 |    4.1 |    5.7 |      3.5 | Agat       |
+| 14335 | Alina      | Bialy           |          3 |    1.7 |         5.9 |       5.7 |       1.2 |    5.7 |      5 |      2.7 | Zieba      |
+| 14336 | Alina      | Ciaptacz        |        1.3 |    3.4 |         2.9 |       3.3 |       1.8 |      4 |      4 |      5.2 | Armatys    |
+| 14337 | Boleslaw   | Duraj           |        2.9 |    5.8 |         1.2 |       4.1 |       3.6 |    5.8 |    1.6 |      5.2 | Blachy     |
+| 14338 | Alina      | Zawada          |        3.9 |      3 |         5.9 |       2.1 |       4.9 |    2.5 |    1.7 |      5.6 | Pala       |
+| 14339 | Eryk       | Zuzek           |        1.5 |      5 |         5.5 |       4.9 |       3.9 |    3.4 |      6 |      1.2 | Kowal      |
+| 14340 | Michal     | Molenda         |        1.7 |    1.6 |           5 |       5.3 |       3.1 |    5.3 |    2.6 |      1.7 | Zieba      |
+| 14341 | Grzegorz   | Wo?niak         |        3.3 |    1.6 |         1.9 |       5.3 |       2.5 |    3.5 |    4.4 |      4.8 | Wegier     |
+| 14342 | Jakub      | Ospala          |        5.4 |    1.3 |         2.8 |       1.6 |       4.7 |    4.9 |    2.3 |      5.8 | Grodecki   |
+| 14343 | Piotr      | Marek           |        3.4 |    1.4 |         5.6 |       3.6 |       4.7 |    3.8 |      5 |      4.4 | Mleczko    |
+| 14344 | Magdalena  | Nowak           |        1.9 |    2.3 |         4.1 |       5.9 |       2.8 |    5.3 |    5.7 |      5.1 | Zieba      |
+| 14345 | Katarzyna  | Karbowniczek    |        5.2 |    2.7 |         1.3 |       3.2 |       2.4 |    1.5 |    1.2 |      1.2 | Stalone    |
+| 14346 | Jan        | Ospala          |        1.8 |    3.3 |         5.3 |       1.5 |       5.2 |    4.2 |    5.2 |      2.4 | Bialy      |
+| 14347 | Krzysztof  | Zagrodzki       |          2 |    2.4 |         5.3 |       2.6 |       1.2 |    3.2 |    4.2 |      3.1 | Fasola     |
+| 14348 | Pawel      | Siemieszko      |        5.4 |    1.3 |         1.4 |       2.2 |       1.9 |    5.2 |    2.7 |      1.7 | Pala       |
+| 14349 | Tomasz     | Kubera          |        2.6 |    3.8 |         3.6 |       5.5 |       5.3 |    2.3 |    3.6 |      2.6 | Jasiek     |
+| 14350 | Andrzej    | Sokolowska      |        1.3 |    1.7 |         2.1 |       3.1 |       4.6 |    2.4 |    3.4 |      3.3 | Koza       |
+| 14351 | Aleksandra | Chrusciel       |        2.6 |    5.4 |         1.6 |       2.8 |       3.7 |    1.7 |    5.2 |      1.4 | Stalone    |
+| 14352 | Joanna     | Janiszewska     |        3.4 |      2 |         2.2 |       1.3 |         4 |    2.4 |    4.6 |        1 | Lesiak     |
+| 14353 | Bogumila   | Raj             |        3.8 |    5.6 |         5.7 |       5.9 |       4.6 |    1.5 |    5.5 |      4.6 | Kret       |
+| 14354 | Anna       | Zawada          |        2.8 |    2.1 |         1.7 |       4.8 |         6 |      2 |    5.2 |      4.9 | Maciarz    |
+| 14355 | Mateusz    | zaba            |        4.9 |    4.6 |         5.4 |       3.3 |       3.9 |    2.7 |    5.8 |        4 | Wegier     |
+| 14356 | Janusz     | Szczesny        |        2.1 |    4.6 |         3.2 |       1.6 |         3 |      3 |    5.6 |      2.9 | Mleczko    |
+| 14357 | Wiktor     | Sputo           |        4.5 |    5.6 |         4.2 |       5.1 |       1.7 |      3 |    3.5 |      5.7 | Czech      |
+| 14358 | Jan        | lapka           |        4.2 |    2.5 |         5.3 |       5.6 |       2.7 |    4.4 |      3 |      4.1 | Armatys    |
+| 14359 | Wiktor     | Kot             |        4.9 |    2.9 |         5.6 |       4.2 |       5.6 |    1.7 |    5.2 |      5.9 | Mleczko    |
+| 14360 | Miroslawa  | Siwczynska      |          3 |      4 |         2.6 |       4.5 |       1.5 |    3.7 |    2.1 |      1.2 | Stalone    |
+| 14361 | Iwona      | Walczynska      |        1.9 |    2.9 |         3.4 |       3.6 |       3.4 |    3.5 |    2.3 |      1.9 | Mleczko    |
+| 14362 | Barbara    | Polys           |        3.8 |    2.4 |         3.9 |       2.9 |       5.9 |    5.5 |      3 |      4.4 | Wilk       |
+| 14363 | Janusz     | Siwy            |        5.3 |    3.8 |           4 |       2.2 |       5.8 |    5.9 |    1.6 |      5.7 | Sek        |
+| 14364 | Jan        | Marek           |        5.1 |      4 |           4 |         6 |       1.7 |    5.5 |      2 |      3.4 | Agat       |
++-------+------------+-----------------+------------+--------+-------------+-----------+-----------+--------+--------+----------+------------+
+652 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> DESCRIBE uczniowie;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| nr          | int(11)     | NO   | PRI | 0       |       |
+| imie        | varchar(20) | NO   |     |         |       |
+| nazwisko    | varchar(20) | NO   |     |         |       |
+| matematyka  | float       | NO   |     | 0       |       |
+| fizyka      | float       | NO   |     | 0       |       |
+| informatyka | float       | NO   |     | 0       |       |
+| angielski   | float       | NO   |     | 0       |       |
+| geografia   | float       | NO   |     | 0       |       |
+| chemia      | float       | NO   |     | 0       |       |
+| polski      | float       | NO   |     | 0       |       |
+| historia    | float       | NO   |     | 0       |       |
+| wychowawca  | varchar(20) | NO   |     |         |       |
++-------------+-------------+------+-----+---------+-------+
+12 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, avg(fizyka) GROUP BY wychowawca HAVING avg(fizyka) > 3.5;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY wychowawca HAVING avg(fizyka) > 3.5' at line 1
+MariaDB [uczniowie]> SELECT wychowawca, avg(fizyka) GROUP BY wychowawca HAVING avg(fizyka)>3.5;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'GROUP BY wychowawca HAVING avg(fizyka)>3.5' at line 1
+MariaDB [uczniowie]> SELECT wychowawca, avg(fizyka) FROM uczniowie GROUP BY wychowawca HAVING avg(fizyka)>3.5;
++------------+--------------------+
+| wychowawca | avg(fizyka)        |
++------------+--------------------+
+| Baj        | 3.6142857500485013 |
+| Bialy      |  3.935714270387377 |
+| Blachy     | 3.7266666889190674 |
+| Broda      |  3.707142880984715 |
+| Drobson    |  3.545454567128962 |
+| Fasola     | 3.7545454502105713 |
+| Godowski   |  4.053333338101705 |
+| Gruszka    | 3.8500000163912773 |
+| Jasiek     |                4.1 |
+| Jung       | 3.5999999716877937 |
+| Koba       |  3.839999961853027 |
+| Komar      | 3.5166666905085244 |
+| Molenda    | 3.7937500029802322 |
+| Muryn      | 4.7000000238418576 |
+| Ospala     |  3.676923054915208 |
+| Pies       |  3.809999942779541 |
+| Siwy       |  4.156249977648258 |
+| Wegier     | 3.7399999698003135 |
+| Zawada     | 3.9999999816601095 |
+| Zdanowicz  | 3.5000000099341073 |
+| Zieba      |  3.542857127530234 |
++------------+--------------------+
+21 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, avg(fizyka) FROM uczniowie GROUP BY wychowawca HAVING avg(fizyka)>3.7;
++------------+--------------------+
+| wychowawca | avg(fizyka)        |
++------------+--------------------+
+| Bialy      |  3.935714270387377 |
+| Blachy     | 3.7266666889190674 |
+| Broda      |  3.707142880984715 |
+| Fasola     | 3.7545454502105713 |
+| Godowski   |  4.053333338101705 |
+| Gruszka    | 3.8500000163912773 |
+| Jasiek     |                4.1 |
+| Koba       |  3.839999961853027 |
+| Molenda    | 3.7937500029802322 |
+| Muryn      | 4.7000000238418576 |
+| Pies       |  3.809999942779541 |
+| Siwy       |  4.156249977648258 |
+| Wegier     | 3.7399999698003135 |
+| Zawada     | 3.9999999816601095 |
++------------+--------------------+
+14 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, avg(fizyka) FROM uczniowie GROUP BY wychowawca HAVING avg(fizyka)>3.8;
++------------+--------------------+
+| wychowawca | avg(fizyka)        |
++------------+--------------------+
+| Bialy      |  3.935714270387377 |
+| Godowski   |  4.053333338101705 |
+| Gruszka    | 3.8500000163912773 |
+| Jasiek     |                4.1 |
+| Koba       |  3.839999961853027 |
+| Muryn      | 4.7000000238418576 |
+| Pies       |  3.809999942779541 |
+| Siwy       |  4.156249977648258 |
+| Zawada     | 3.9999999816601095 |
++------------+--------------------+
+9 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, avg(matematyka), avg(fizyka), avg(informatyka) FROM uczniowie GROUP BY wychowawca;
++------------+--------------------+--------------------+--------------------+
+| wychowawca | avg(matematyka)    | avg(fizyka)        | avg(informatyka)   |
++------------+--------------------+--------------------+--------------------+
+| Agat       | 3.2733333269755045 |   3.10000003973643 | 3.0066666762034098 |
+| Armatys    | 3.5315789486232556 | 3.3052631616592407 |  3.610526342141001 |
+| Baj        | 3.6357143010411943 | 3.6142857500485013 |  3.314285704067775 |
+| Baran      | 3.1733333508173627 | 3.2333333412806193 | 3.8666667143503823 |
+| Bialy      |   2.82857141324452 |  3.935714270387377 |  4.042857136045184 |
+| Blachy     | 3.4133333444595335 | 3.7266666889190674 |   2.60666667620341 |
+| Broda      |  4.014285743236542 |  3.707142880984715 | 3.6714285697255815 |
+| Czech      |  3.493333331743876 |  3.200000007947286 |  3.800000015894572 |
+| Czeresnia  |   3.57142858845847 |  2.871428506714957 |  3.114285707473755 |
+| Drobson    |  3.281818227334456 |  3.545454567128962 |  3.381818175315857 |
+| Fasola     | 3.6727272380482066 | 3.7545454502105713 |  3.490909121253274 |
+| Godowski   |  3.406666660308838 |  4.053333338101705 | 2.8400000015894573 |
+| Grodecki   | 3.2090909481048584 |  3.054545456712896 |  4.027272744612261 |
+| Gruszka    |  2.943750038743019 | 3.8500000163912773 | 3.4000000208616257 |
+| Jakubowski | 3.8642857245036533 | 3.0428571615900313 | 3.5214286020823886 |
+| Jasiek     | 3.8300000071525573 |                4.1 | 3.3699999690055846 |
+| Jung       | 3.7312500029802322 | 3.5999999716877937 |  2.999999985098839 |
+| Koba       |  4.199999976158142 |  3.839999961853027 | 3.4200000047683714 |
+| Komar      | 2.7083333233992257 | 3.5166666905085244 | 3.7499999701976776 |
+| Kot        | 2.9300000190734865 |  3.300000011920929 | 3.9400000095367433 |
+| Kowal      |  3.567741936252963 | 3.3354838548168058 |  3.603225815680719 |
+| Koza       |  3.561538476210374 |  2.853846164850088 |  3.038461547631484 |
+| Krakowski  | 3.7999999848279087 |  2.645454525947571 |  3.481818188320507 |
+| Kret       | 3.3705882535261265 |  3.147058774443234 | 3.6999999705482933 |
+| Lesiak     |  2.709090904756026 |  2.463636365803805 |   4.07272726839239 |
+| Maciarz    | 3.3500000408717563 |  2.907142852033888 |  3.221428539071764 |
+| Mleczko    |  3.353333306312561 | 3.4800000031789144 | 3.7266666571299236 |
+| Molenda    | 3.7500000074505806 | 3.7937500029802322 |  4.181250020861626 |
+| Muryn      |  3.749999988079071 | 4.7000000238418576 | 3.6199999928474424 |
+| Niemiec    | 3.0153845915427575 | 3.1615384817123413 | 3.3538461373402524 |
+| Ospala     | 3.5692307490568895 |  3.676923054915208 |  3.261538423024691 |
+| Pala       |  3.721428598676409 | 3.2999999863760814 |  3.114285707473755 |
+| Pies       | 3.0499999642372133 |  3.809999942779541 |  3.190000021457672 |
+| Piwko      |  3.271428556669326 |  3.257142867360796 | 3.3904761984234764 |
+| Rusek      | 3.7300000190734863 |  3.109999990463257 |  3.300000011920929 |
+| Samson     | 2.9299999952316282 | 2.8700000047683716 | 3.1899999618530273 |
+| Sek        | 3.9882352772881005 |  2.923529358471141 | 3.8352941274642944 |
+| Sewiolo    | 3.4250000019868216 | 3.1166666547457376 |  2.958333303531011 |
+| Siema      |  3.424999932448069 |  3.166666656732559 | 3.8666666448116302 |
+| Siwy       | 3.0437500178813934 |  4.156249977648258 | 3.6062499806284904 |
+| sliwa      | 3.7555555502573648 | 3.4611110952165394 | 3.6388889021343656 |
+| Stalone    | 3.8263157543383146 |  3.268421035063894 | 3.3368420663632845 |
+| Wegier     |  3.393333371480306 | 3.7399999698003135 | 3.8799999475479128 |
+| Wilk       |  2.224999964237213 | 3.4499999582767487 | 2.9250000417232513 |
+| Zawada     |  3.769230760060824 | 3.9999999816601095 |  3.799999998166011 |
+| zbik       | 2.9285714626312256 | 3.4857142652784074 |  3.999999931880406 |
+| Zdanowicz  | 3.4666666885217032 | 3.5000000099341073 | 3.2916666766007743 |
+| Zieba      |  2.907142869063786 |  3.542857127530234 |  3.635714292526245 |
++------------+--------------------+--------------------+--------------------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) FROM uczniowie GROUP BY wychowawca HAVING count(nr) > 10;
++------------+-----------+
+| wychowawca | count(nr) |
++------------+-----------+
+| Agat       |        15 |
+| Armatys    |        19 |
+| Baj        |        14 |
+| Baran      |        15 |
+| Bialy      |        14 |
+| Blachy     |        15 |
+| Broda      |        14 |
+| Czech      |        15 |
+| Drobson    |        11 |
+| Fasola     |        11 |
+| Godowski   |        15 |
+| Grodecki   |        11 |
+| Gruszka    |        16 |
+| Jakubowski |        14 |
+| Jung       |        16 |
+| Komar      |        12 |
+| Kowal      |        31 |
+| Koza       |        13 |
+| Krakowski  |        11 |
+| Kret       |        17 |
+| Lesiak     |        11 |
+| Maciarz    |        14 |
+| Mleczko    |        15 |
+| Molenda    |        16 |
+| Niemiec    |        13 |
+| Ospala     |        13 |
+| Pala       |        14 |
+| Piwko      |        21 |
+| Sek        |        17 |
+| Sewiolo    |        12 |
+| Siema      |        12 |
+| Siwy       |        16 |
+| sliwa      |        18 |
+| Stalone    |        19 |
+| Wegier     |        15 |
+| Zawada     |        13 |
+| Zdanowicz  |        12 |
+| Zieba      |        14 |
++------------+-----------+
+38 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> 
+MariaDB [uczniowie]> SELECT min(avg(fizyka)) FROM uczniowie;
+ERROR 1111 (HY000): Invalid use of group function
+MariaDB [uczniowie]> SELECT avg(fizyka) FROM uczniowie;
++--------------------+
+| avg(fizyka)        |
++--------------------+
+| 3.4303680932594953 |
++--------------------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, avg(informatyka) FROM uczniowie GROUP BY wychowawca ORDER BY avg(informatyka);
++------------+--------------------+
+| wychowawca | avg(informatyka)   |
++------------+--------------------+
+| Blachy     |   2.60666667620341 |
+| Godowski   | 2.8400000015894573 |
+| Wilk       | 2.9250000417232513 |
+| Sewiolo    |  2.958333303531011 |
+| Jung       |  2.999999985098839 |
+| Agat       | 3.0066666762034098 |
+| Koza       |  3.038461547631484 |
+| Czeresnia  |  3.114285707473755 |
+| Pala       |  3.114285707473755 |
+| Samson     | 3.1899999618530273 |
+| Pies       |  3.190000021457672 |
+| Maciarz    |  3.221428539071764 |
+| Ospala     |  3.261538423024691 |
+| Zdanowicz  | 3.2916666766007743 |
+| Rusek      |  3.300000011920929 |
+| Baj        |  3.314285704067775 |
+| Stalone    | 3.3368420663632845 |
+| Niemiec    | 3.3538461373402524 |
+| Jasiek     | 3.3699999690055846 |
+| Drobson    |  3.381818175315857 |
+| Piwko      | 3.3904761984234764 |
+| Gruszka    | 3.4000000208616257 |
+| Koba       | 3.4200000047683714 |
+| Krakowski  |  3.481818188320507 |
+| Fasola     |  3.490909121253274 |
+| Jakubowski | 3.5214286020823886 |
+| Kowal      |  3.603225815680719 |
+| Siwy       | 3.6062499806284904 |
+| Armatys    |  3.610526342141001 |
+| Muryn      | 3.6199999928474424 |
+| Zieba      |  3.635714292526245 |
+| sliwa      | 3.6388889021343656 |
+| Broda      | 3.6714285697255815 |
+| Kret       | 3.6999999705482933 |
+| Mleczko    | 3.7266666571299236 |
+| Komar      | 3.7499999701976776 |
+| Zawada     |  3.799999998166011 |
+| Czech      |  3.800000015894572 |
+| Sek        | 3.8352941274642944 |
+| Siema      | 3.8666666448116302 |
+| Baran      | 3.8666667143503823 |
+| Wegier     | 3.8799999475479128 |
+| Kot        | 3.9400000095367433 |
+| zbik       |  3.999999931880406 |
+| Grodecki   |  4.027272744612261 |
+| Bialy      |  4.042857136045184 |
+| Lesiak     |   4.07272726839239 |
+| Molenda    |  4.181250020861626 |
++------------+--------------------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> DESCRIBE uczniowie;
++-------------+-------------+------+-----+---------+-------+
+| Field       | Type        | Null | Key | Default | Extra |
++-------------+-------------+------+-----+---------+-------+
+| nr          | int(11)     | NO   | PRI | 0       |       |
+| imie        | varchar(20) | NO   |     |         |       |
+| nazwisko    | varchar(20) | NO   |     |         |       |
+| matematyka  | float       | NO   |     | 0       |       |
+| fizyka      | float       | NO   |     | 0       |       |
+| informatyka | float       | NO   |     | 0       |       |
+| angielski   | float       | NO   |     | 0       |       |
+| geografia   | float       | NO   |     | 0       |       |
+| chemia      | float       | NO   |     | 0       |       |
+| polski      | float       | NO   |     | 0       |       |
+| historia    | float       | NO   |     | 0       |       |
+| wychowawca  | varchar(20) | NO   |     |         |       |
++-------------+-------------+------+-----+---------+-------+
+12 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT * FROM uczniowie LIMIT 10;
++-------+-----------+------------+------------+--------+-------------+-----------+-----------+--------+--------+----------+------------+
+| nr    | imie      | nazwisko   | matematyka | fizyka | informatyka | angielski | geografia | chemia | polski | historia | wychowawca |
++-------+-----------+------------+------------+--------+-------------+-----------+-----------+--------+--------+----------+------------+
+| 13713 | Monika    | Frankowski |        4.6 |    4.5 |         1.8 |       1.7 |       2.1 |    4.3 |    1.3 |      2.6 | Blachy     |
+| 13714 | Jan       | lapka      |        5.3 |    1.9 |         5.9 |         3 |       2.6 |    5.8 |    4.7 |      2.1 | Godowski   |
+| 13715 | Miroslawa | Nowak      |          5 |    2.5 |         2.2 |       1.5 |       5.5 |    3.8 |    4.4 |      5.3 | Krakowski  |
+| 13716 | Krzysztof | Maciejak   |        4.2 |    5.8 |         1.4 |       1.5 |         3 |    1.4 |    4.4 |      4.3 | Muryn      |
+| 13717 | Wiktor    | Zagrodzki  |        2.3 |    3.9 |         5.6 |       1.3 |       3.6 |    3.2 |    1.7 |      2.2 | Siwy       |
+| 13718 | Feliks    | Nowak      |        4.2 |    5.6 |         1.7 |       2.9 |       4.9 |    4.5 |    2.9 |      5.9 | Fasola     |
+| 13719 | Iwona     | Zawada     |        3.7 |    2.6 |         1.3 |       3.7 |       3.2 |    5.1 |    4.5 |      4.9 | Pala       |
+| 13720 | Jan       | Wronski    |        4.8 |    2.6 |         1.4 |       1.5 |       4.6 |    3.4 |    4.5 |      3.8 | Sewiolo    |
+| 13721 | Jan       | Smilek     |        3.5 |      3 |         4.2 |       2.7 |       5.2 |    4.4 |    2.1 |      4.1 | Siwy       |
+| 13722 | Krzysztof | Chrusciel  |        3.9 |    3.7 |         1.3 |       3.8 |       4.8 |    1.5 |    2.4 |      2.6 | Agat       |
++-------+-----------+------------+------------+--------+-------------+-----------+-----------+--------+--------+----------+------------+
+10 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, min(informatyka), max(informatyka) FROM uczniowie GROUP BY wychowawca ORDER BY informatyka;
++------------+------------------+------------------+
+| wychowawca | min(informatyka) | max(informatyka) |
++------------+------------------+------------------+
+| Jung       |                1 |              5.5 |
+| Wilk       |              1.1 |              4.4 |
+| Komar      |              1.1 |              5.8 |
+| Agat       |                1 |              5.9 |
+| Stalone    |              1.1 |              5.7 |
+| Pala       |              1.3 |              5.9 |
+| Pies       |              1.4 |              5.7 |
+| Muryn      |              1.3 |              5.5 |
+| Niemiec    |              1.4 |                6 |
+| Sewiolo    |              1.4 |              5.5 |
+| Gruszka    |              1.2 |              5.5 |
+| Fasola     |              1.1 |                6 |
+| Rusek      |              1.6 |              5.4 |
+| Blachy     |              1.2 |              5.3 |
+| Jasiek     |              1.2 |              5.7 |
+| Krakowski  |              1.1 |              5.5 |
+| Koza       |                1 |              5.5 |
+| Jakubowski |              1.2 |              5.9 |
+| Czeresnia  |              1.5 |                5 |
+| Ospala     |              1.3 |              5.7 |
+| Drobson    |              1.1 |              5.9 |
+| Kowal      |              1.5 |              5.6 |
+| Maciarz    |              1.1 |              5.8 |
+| Piwko      |              1.2 |              5.5 |
+| Baran      |              2.2 |              5.9 |
+| Koba       |              1.3 |              5.9 |
+| Armatys    |                1 |              5.9 |
+| Zawada     |              1.8 |              5.6 |
+| Lesiak     |              1.8 |              5.7 |
+| Zdanowicz  |              1.6 |              4.5 |
+| Siema      |              1.9 |              5.9 |
+| Sek        |              1.9 |              5.8 |
+| Grodecki   |              1.5 |              4.9 |
+| Samson     |              1.2 |              5.5 |
+| Czech      |              1.4 |              5.8 |
+| Molenda    |                2 |              5.9 |
+| Broda      |              1.2 |              5.2 |
+| Bialy      |              1.3 |              5.8 |
+| Kot        |              1.3 |              5.1 |
+| Zieba      |              1.3 |                6 |
+| Mleczko    |              1.2 |              5.8 |
+| sliwa      |              1.4 |              5.9 |
+| Siwy       |              1.1 |              5.9 |
+| zbik       |              2.1 |              5.6 |
+| Kret       |              1.4 |              5.7 |
+| Wegier     |              1.5 |                6 |
+| Godowski   |              1.1 |              5.9 |
+| Baj        |              1.2 |                6 |
++------------+------------------+------------------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, min(informatyka), max(informatyka) FROM uczniowie ORDER BY informatyka;
++------------+------------------+------------------+
+| wychowawca | min(informatyka) | max(informatyka) |
++------------+------------------+------------------+
+| Blachy     |                1 |                6 |
++------------+------------------+------------------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) WHERE imie LIKE "%a" GROUP BY wychowawca;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE imie LIKE "%a" GROUP BY wychowawca' at line 1
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) WHERE imie LIKE "a" GROUP BY wychowawca;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE imie LIKE "a" GROUP BY wychowawca' at line 1
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) WHERE imie="a" GROUP BY wychowawca;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE imie="a" GROUP BY wychowawca' at line 1
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) FROM uczniowie WHERE imie LIKE "%a" GROUP BY wychowawca;
++------------+-----------+
+| wychowawca | count(nr) |
++------------+-----------+
+| Agat       |         4 |
+| Armatys    |         7 |
+| Baj        |         6 |
+| Baran      |         7 |
+| Bialy      |         5 |
+| Blachy     |        10 |
+| Broda      |         6 |
+| Czech      |         4 |
+| Czeresnia  |         3 |
+| Drobson    |         5 |
+| Fasola     |         4 |
+| Godowski   |         5 |
+| Grodecki   |         4 |
+| Gruszka    |         9 |
+| Jakubowski |         7 |
+| Jasiek     |         4 |
+| Jung       |         5 |
+| Koba       |         6 |
+| Komar      |         5 |
+| Kot        |         4 |
+| Kowal      |        13 |
+| Koza       |         6 |
+| Krakowski  |         6 |
+| Kret       |         7 |
+| Lesiak     |         2 |
+| Maciarz    |         6 |
+| Mleczko    |         6 |
+| Molenda    |         4 |
+| Muryn      |         3 |
+| Niemiec    |         8 |
+| Ospala     |         7 |
+| Pala       |         4 |
+| Pies       |         5 |
+| Piwko      |        11 |
+| Rusek      |         6 |
+| Samson     |         5 |
+| Sek        |         7 |
+| Sewiolo    |         4 |
+| Siema      |         5 |
+| Siwy       |         7 |
+| sliwa      |        10 |
+| Stalone    |         9 |
+| Wegier     |         2 |
+| Wilk       |         2 |
+| Zawada     |         8 |
+| zbik       |         4 |
+| Zdanowicz  |         5 |
+| Zieba      |         5 |
++------------+-----------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) AS ilosc_dziewczat FROM uczniowie WHERE imie LIKE "%a" GROUP BY wychowawca;
++------------+-----------------+
+| wychowawca | ilosc_dziewczat |
++------------+-----------------+
+| Agat       |               4 |
+| Armatys    |               7 |
+| Baj        |               6 |
+| Baran      |               7 |
+| Bialy      |               5 |
+| Blachy     |              10 |
+| Broda      |               6 |
+| Czech      |               4 |
+| Czeresnia  |               3 |
+| Drobson    |               5 |
+| Fasola     |               4 |
+| Godowski   |               5 |
+| Grodecki   |               4 |
+| Gruszka    |               9 |
+| Jakubowski |               7 |
+| Jasiek     |               4 |
+| Jung       |               5 |
+| Koba       |               6 |
+| Komar      |               5 |
+| Kot        |               4 |
+| Kowal      |              13 |
+| Koza       |               6 |
+| Krakowski  |               6 |
+| Kret       |               7 |
+| Lesiak     |               2 |
+| Maciarz    |               6 |
+| Mleczko    |               6 |
+| Molenda    |               4 |
+| Muryn      |               3 |
+| Niemiec    |               8 |
+| Ospala     |               7 |
+| Pala       |               4 |
+| Pies       |               5 |
+| Piwko      |              11 |
+| Rusek      |               6 |
+| Samson     |               5 |
+| Sek        |               7 |
+| Sewiolo    |               4 |
+| Siema      |               5 |
+| Siwy       |               7 |
+| sliwa      |              10 |
+| Stalone    |               9 |
+| Wegier     |               2 |
+| Wilk       |               2 |
+| Zawada     |               8 |
+| zbik       |               4 |
+| Zdanowicz  |               5 |
+| Zieba      |               5 |
++------------+-----------------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) AS ilosc_dziewczat FROM uczniowie WHERE imie LIKE "%a" GROUP BY wychowawca;
++------------+-----------------+
+| wychowawca | ilosc_dziewczat |
++------------+-----------------+
+| Agat       |               4 |
+| Armatys    |               7 |
+| Baj        |               6 |
+| Baran      |               7 |
+| Bialy      |               5 |
+| Blachy     |              10 |
+| Broda      |               6 |
+| Czech      |               4 |
+| Czeresnia  |               3 |
+| Drobson    |               5 |
+| Fasola     |               4 |
+| Godowski   |               5 |
+| Grodecki   |               4 |
+| Gruszka    |               9 |
+| Jakubowski |               7 |
+| Jasiek     |               4 |
+| Jung       |               5 |
+| Koba       |               6 |
+| Komar      |               5 |
+| Kot        |               4 |
+| Kowal      |              13 |
+| Koza       |               6 |
+| Krakowski  |               6 |
+| Kret       |               7 |
+| Lesiak     |               2 |
+| Maciarz    |               6 |
+| Mleczko    |               6 |
+| Molenda    |               4 |
+| Muryn      |               3 |
+| Niemiec    |               8 |
+| Ospala     |               7 |
+| Pala       |               4 |
+| Pies       |               5 |
+| Piwko      |              11 |
+| Rusek      |               6 |
+| Samson     |               5 |
+| Sek        |               7 |
+| Sewiolo    |               4 |
+| Siema      |               5 |
+| Siwy       |               7 |
+| sliwa      |              10 |
+| Stalone    |               9 |
+| Wegier     |               2 |
+| Wilk       |               2 |
+| Zawada     |               8 |
+| zbik       |               4 |
+| Zdanowicz  |               5 |
+| Zieba      |               5 |
++------------+-----------------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, min(informatyka), max(informatyka) FROM uczniowie ORDER BY informatyka;
++------------+------------------+------------------+
+| wychowawca | min(informatyka) | max(informatyka) |
++------------+------------------+------------------+
+| Blachy     |                1 |                6 |
++------------+------------------+------------------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, min(informatyka), max(informatyka) FROM uczniowie GROUP BY wychowawca ORDER BY informatyka;
++------------+------------------+------------------+
+| wychowawca | min(informatyka) | max(informatyka) |
++------------+------------------+------------------+
+| Jung       |                1 |              5.5 |
+| Wilk       |              1.1 |              4.4 |
+| Komar      |              1.1 |              5.8 |
+| Agat       |                1 |              5.9 |
+| Stalone    |              1.1 |              5.7 |
+| Pala       |              1.3 |              5.9 |
+| Pies       |              1.4 |              5.7 |
+| Muryn      |              1.3 |              5.5 |
+| Niemiec    |              1.4 |                6 |
+| Sewiolo    |              1.4 |              5.5 |
+| Gruszka    |              1.2 |              5.5 |
+| Fasola     |              1.1 |                6 |
+| Rusek      |              1.6 |              5.4 |
+| Blachy     |              1.2 |              5.3 |
+| Jasiek     |              1.2 |              5.7 |
+| Krakowski  |              1.1 |              5.5 |
+| Koza       |                1 |              5.5 |
+| Jakubowski |              1.2 |              5.9 |
+| Czeresnia  |              1.5 |                5 |
+| Ospala     |              1.3 |              5.7 |
+| Drobson    |              1.1 |              5.9 |
+| Kowal      |              1.5 |              5.6 |
+| Maciarz    |              1.1 |              5.8 |
+| Piwko      |              1.2 |              5.5 |
+| Baran      |              2.2 |              5.9 |
+| Koba       |              1.3 |              5.9 |
+| Armatys    |                1 |              5.9 |
+| Zawada     |              1.8 |              5.6 |
+| Lesiak     |              1.8 |              5.7 |
+| Zdanowicz  |              1.6 |              4.5 |
+| Siema      |              1.9 |              5.9 |
+| Sek        |              1.9 |              5.8 |
+| Grodecki   |              1.5 |              4.9 |
+| Samson     |              1.2 |              5.5 |
+| Czech      |              1.4 |              5.8 |
+| Molenda    |                2 |              5.9 |
+| Broda      |              1.2 |              5.2 |
+| Bialy      |              1.3 |              5.8 |
+| Kot        |              1.3 |              5.1 |
+| Zieba      |              1.3 |                6 |
+| Mleczko    |              1.2 |              5.8 |
+| sliwa      |              1.4 |              5.9 |
+| Siwy       |              1.1 |              5.9 |
+| zbik       |              2.1 |              5.6 |
+| Kret       |              1.4 |              5.7 |
+| Wegier     |              1.5 |                6 |
+| Godowski   |              1.1 |              5.9 |
+| Baj        |              1.2 |                6 |
++------------+------------------+------------------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, count(nr) FROM uczniowie WHERE imie LIKE "%a" GROUP BY wychowawca;
++------------+-----------+
+| wychowawca | count(nr) |
++------------+-----------+
+| Agat       |         4 |
+| Armatys    |         7 |
+| Baj        |         6 |
+| Baran      |         7 |
+| Bialy      |         5 |
+| Blachy     |        10 |
+| Broda      |         6 |
+| Czech      |         4 |
+| Czeresnia  |         3 |
+| Drobson    |         5 |
+| Fasola     |         4 |
+| Godowski   |         5 |
+| Grodecki   |         4 |
+| Gruszka    |         9 |
+| Jakubowski |         7 |
+| Jasiek     |         4 |
+| Jung       |         5 |
+| Koba       |         6 |
+| Komar      |         5 |
+| Kot        |         4 |
+| Kowal      |        13 |
+| Koza       |         6 |
+| Krakowski  |         6 |
+| Kret       |         7 |
+| Lesiak     |         2 |
+| Maciarz    |         6 |
+| Mleczko    |         6 |
+| Molenda    |         4 |
+| Muryn      |         3 |
+| Niemiec    |         8 |
+| Ospala     |         7 |
+| Pala       |         4 |
+| Pies       |         5 |
+| Piwko      |        11 |
+| Rusek      |         6 |
+| Samson     |         5 |
+| Sek        |         7 |
+| Sewiolo    |         4 |
+| Siema      |         5 |
+| Siwy       |         7 |
+| sliwa      |        10 |
+| Stalone    |         9 |
+| Wegier     |         2 |
+| Wilk       |         2 |
+| Zawada     |         8 |
+| zbik       |         4 |
+| Zdanowicz  |         5 |
+| Zieba      |         5 |
++------------+-----------+
+48 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT round(avg(matematyka), 3) FROM uczniowie LIMIT 10; 
++---------------------------+
+| round(avg(matematyka), 3) |
++---------------------------+
+|                     3.435 |
++---------------------------+
+1 row in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, round(avg(matematyka), 3) FROM uczniowie GROUP BY wychowawca LIMIT 10; 
++------------+---------------------------+
+| wychowawca | round(avg(matematyka), 3) |
++------------+---------------------------+
+| Agat       |                     3.273 |
+| Armatys    |                     3.532 |
+| Baj        |                     3.636 |
+| Baran      |                     3.173 |
+| Bialy      |                     2.829 |
+| Blachy     |                     3.413 |
+| Broda      |                     4.014 |
+| Czech      |                     3.493 |
+| Czeresnia  |                     3.571 |
+| Drobson    |                     3.282 |
++------------+---------------------------+
+10 rows in set (0.00 sec)
+
+MariaDB [uczniowie]> SELECT wychowawca, round(avg(matematyka), 3) AS avg_math FROM uczniowie GROUP BY wychowawca LIMIT 10; 
++------------+----------+
+| wychowawca | avg_math |
++------------+----------+
+| Agat       |    3.273 |
+| Armatys    |    3.532 |
+| Baj        |    3.636 |
+| Baran      |    3.173 |
+| Bialy      |    2.829 |
+| Blachy     |    3.413 |
+| Broda      |    4.014 |
+| Czech      |    3.493 |
+| Czeresnia  |    3.571 |
+| Drobson    |    3.282 |
++------------+----------+
+10 rows in set (0.00 sec)
+
