@@ -1,0 +1,51 @@
+Wskazówka:
+Efekt cienia dla kontenerów z tresci¹:
+
+background-color:white;
+-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+..........................................................................
+TREŒÆ
+...........................................................................
+
+Tradycje krakowskie| Lajkonik
+TRADYCJE KRAKOWSKIE
+harcuj¹cy Lajkonik
+
+STRONA G£ÓWNA
+HISTORIA
+GALERIA
+POCHÓD 2016
+KONTAKT
+
+Lajkonik krakowski 
+Nazywany tak¿e konikiem zwierzynieckim lub Tatarzynem, jest jedn¹ z najbardziej charakterystycznych postaci krakowskich i jednym z symboli Krakowa.
+
+Charakterystyczny ubiór
+Postaæ lajkonika sk³ada siê z manekina konia, który przymocowany jest do pasa osoby, odgrywaj¹cej rolê brodatego jeŸdŸca na koniku. Ma³y konik jest na dwóch nogach, odzianych w czerwone trzewiczki, zaœ jeŸdziec ma na g³owie wysok¹ szpiczast¹ czapkê, a w rêce trzyma bu³awê. Lajkonik jest wiêc Tatarzynem, który harcuje na bia³ym koniku. Ubiór konika i jeŸdŸca jest przesi¹kniêty motywami orientalnymi. Co roku osiem dni po Bo¿ym Ciele w Krakowie odbywa siê pochód lajkonika. 
+
+W 1904 roku Stanis³aw Wyspiañski zaprojektowa³ ubiór Tatarzyna, który ³¹czy w sobie elementy stroju staropolskiego oraz wschodniego. W po³owie ubieg³ego stulecia orszak ubierano wed³ug projektów Witolda Chomicza. W 1997 roku nowe szaty dla w³óczków i orkiestry zosta³y zaprojektowane przez Krystynê Zachwatowicz. Oryginalny strój Lajkonika przechowywany jest na co dzieñ w krakowskim Muzeum Historycznym, które jest te¿ organizatorem harców lajkonika. Jest to ma³y bia³y koñ na dwóch nogach odziany w wysokie czerwone trzewiki, na którym siedzi postaæ brodatego jeŸdŸca. Na g³owie ma on wysoki kolorowy i bogato dekorowany turban zakoñczony pó³ksiê¿ycem z prawdziwymi koralami. Wschodnie ubranie jeŸdŸca jest z czerwonego p³ótna, ma ono szerokie rêkawy oraz okaza³¹ kamizelkê i pas z frêdzlami ze z³otymi niæmi, natomiast z boku – krótk¹ szablê. W rêku Tatarzyn trzyma bu³awê, któr¹ uderza (uwa¿a siê, ¿e na szczêœcie) napotkanych ludzi. Konik zwierzyniecki na grzbiecie ma ozdobn¹ kapê bogato udekorowan¹ motywami orientalnymi. Na ³bie konika przyczepione s¹ pióra z bia³ych strusi. Na szyi konik ma naszyjnik ze z³otych kr¹¿ków.
+
+Copyright LAJKONIK 2016
+Stronê w ramach sprawdzianu z TSSI wykona³: Imiê i Nazwisko, klasa 
+DATA UTWORZENIA: 02/06/2016 godz.:07:30
+
+..............................................
+GALERIA z pochodu Lajkonka 2015
+
+..............................................
+
+KONTAKT
+
+Napisz do nas
+W razie jakichkolwiek pytañ i chêci uzyskania dodatkowych informacji zachêcamy do kontaktu z nami. Postaramy siê odpowiedzieæ na wszystkie zapytania.
+tel.: 12 777 04 02;
+fax: 12 777 04 59
+* – pola wymagane
+
+Imiê i nazwisko
+E-mail
+Wiadomoœæ
+Wyœlij list
