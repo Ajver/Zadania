@@ -30,8 +30,8 @@ body {
     -webkit-background-size: contain;
     background-size: contain;
     display: block;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
 }
 
 .hero-img img {
@@ -63,6 +63,16 @@ body {
     font-size: 18px;
 }
 
+.main-nav a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
 .main-nav li:nth-child(1) { border-color: greenyellow; }
 .main-nav li:nth-child(2) { border-color: yellow; }
 .main-nav li:nth-child(3) { border-color: orange; }
@@ -73,6 +83,7 @@ body {
 .main-nav li:nth-child(8) { border-color: darkgreen; }
 
 main {
+    width: 100%;
 }
 
 h2 {
@@ -83,6 +94,11 @@ h2 {
 p {
     margin: 5px 0;
     font-size: 18px;
+}
+
+ol {
+    margin: 20px 0;
+    margin-left: 30px;
 }
 
 .page-footer {
