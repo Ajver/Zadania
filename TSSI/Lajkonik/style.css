@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+background-color:white;
+-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+-moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+}
+
+@font-face{
+    font-family: HelveticaNeueBold;
+    src: url("fonty/HelveticaNeue-CondensedBold.otf")
+}
+
+@font-face{
+    font-family: OpenSans-Condlight;
+    src: url("fonty/OpenSans-CondLight.ttf")
+}
+
+.logo{
+    margin: 0 15%;
+    display: flex;
+}
+
+.logo img{
+    margin-bottom: -3%;
+}
+
+.logo h1{
+    margin-top: 7%;
+    font-family: HelveticaNeueBold, sans-serif;
+}
+
+
+.deco{
+    color: #982988;
+}
+
+nav{
+    background-color: #919191;
+}
+
+nav ul li{
+    display: inline;
+    padding: 1%;
+}
+
+nav ul{
+    width: 100%;
+    margin: 0 0 0 30%;
+    padding: 1% 0;
+}
+
+nav ul li:hover{
+ border-bottom: 6px solid #982988;   
+}
+nav ul li:hover a{
+    color: black;
+}
+main{
+    margin: 5% 10%;
+    min-height: 68vh;
+}
+
+.card{
+    padding: 6%;
+    border: 3px solid rgba(91,91,91, .1);
+}
+.card img{width: 100%;}
+
+
+.row{
+    display: flex;
+}
+
+.row h2{
+    color: #919191;
+}
+
+.col-4{
+    width: 33.333%;
+    margin-right: 3%;
+}
+.col-8{
+    width: 66.666%;
+}
+.col-3{
+    width: 25%;
+    padding: 0 1%;
+}
+
+.col-8 p{
+    text-align: justify;
+    margin-left: 1%;
+}
+
+footer{
+    border-top: 6px solid #982988;
+    text-align: center;
+    font-family: OpenSans-Condlight;
+    background-color: #818181;
+    height: 19%;
+}
+
+footer h2{
+    font-size: 1.3em;
+    color: white;
+    font-weight: 100;
+    line-height: .8em;
+}
+
+.grayscale{
+    color: #919191;
+}
+
+form input{
+    width: 70%;
+    margin: 1% 0;
+}
+
+.button{
+    border: 0;
+    padding: 1% 3%;
+    border-radius: 40px;
+    background-color: #982988;
+    font-size: 1em;
+    width: 20%;
+    margin: 0 auto;
+}
+
+a{
+    color: white;
+}
+a:link{
+    text-decoration: none;
+}
