@@ -1,0 +1,47 @@
+Kolory do nawigacji:
+greenyellow
+yellow
+orange
+darkorange
+yellow
+greenyellow
+lightgreen
+darkgreen
+ 
+Wskazówka: by wprowadziæ obramowanie lewe u¿yj pseudoklasy :nth-child()
+np:
+#navigation li:nth-child(1) {
+    border-left: 5px solid greenyellow;}
+
+
+.....................TREŒÆ STRONY...............................................
+FRUNATIX
+
+STRONA G£ÓWNA
+ZALECENIA ¯YWIENIOWE
+GATUNKI
+DIETA
+PROMOCJE
+OFERTA
+GALERIA
+KONTAKT
+
+ZDROWA ¯YWNOŒÆ
+To co jemy ma ogromy wp³yw na nasze zdrowie. Nasze przyzwyczajenia ¿ywieniowe nie zawsze odpowiadaj¹ potrzebom naszego organizmu. Najczêœciej jemy szybko i "byle jak". Nie zwracamy uwagi na wartoœci od¿ywcze, jakie nam s¹ potrzebne do prawid³owego rozwoju, a jakie dane produkty nam dostarczaj¹. Jemy po prostu to, co lubimy. Ale czy to jest zdrowe?. Zdaniem ¿ywieniowców, powinniœmy zwracaæ wiêksz¹ uwagê na to, co jemy. ¯ywiæ zdrowo powinniœmy siê w ka¿dym okresie ¿ycia.
+
+Copyright &copy; FRUNATIX 2016
+Stronê w ramach sprawdzianu z TSSI wykona³: Imiê i Nazwisko autora strony, klasa 
+DATA UTWORZENIA: 10/06/2016 godz.:10:10
+
+
+PODSTAWOWE ZALECENIA ¯YWIENIOWE
+ZALECANE PRZEZ INSTYTUT ¯YWNOŒCI I ¯YWIENIA
+Jedz regularnie 5  posi³ków dziennie. Ka¿dy dzieñ rozpoczynaj od œniadania.
+Twoje codzienne po¿ywienie powinno zawieraæ ró¿norodn¹ ¿ywnoœæ pochodzenia roœlinnego i zwierzêcego.
+Spo¿ywaj codziennie produkty zbo¿owe oraz warzywa i owoce. Warzywa najlepiej jest jeœæ na surowo lub krótko gotowane.
+Dwa razy dziennie spo¿ywaj mleko, bia³y ser lub jogurty o obni¿onej zawartoœci t³uszczu.
+Ograniczaj iloœæ spo¿ywanego t³uszcz. T³uszcze zwierzêce zastêpuj olejami lub oliw¹ z oliwek.
+Miêso i jego przetwory jedz w iloœciach umiarkowanych dwa lub trzy razy w tygodniu. Wybieraj miêso chude. W pozosta³e dni jadaj dania z ryb i roœlin str¹czkowych (fasola, groch, soja).
+Ograniczaj spo¿ycie soli kuchennej. Jedna p³aska ³y¿eczka soli dziennie dodawana do potraw powinna Ci wystarczyæ. Nie dosalaj.
+Zachowaj umiar w jedzeniu cukru i s³odyczy. Zamiast s³odyczy jadaj wiêcej owoców i warzyw.
+B¹dŸ aktywny ruchowo. Pomo¿e Ci to utraciæ nadmiar dostarczanej z po¿ywienie energii (kalorii).

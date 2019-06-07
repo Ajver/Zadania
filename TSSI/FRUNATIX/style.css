@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: OpenSans;
+}
+
+.page-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.page-logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: flex-end;
+    font-size: 40px;
+}
+
+.page-logo::before {
+    content: '';
+    background-image: url(OBRAZY/jablko.jpg);
+    -webkit-background-size: contain;
+    background-size: contain;
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+.hero-img img {
+    width: 400px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    border: 8px solid yellow;
+    border-left: none;
+    border-right: none;
+    padding: 20px 30px;
+}
+
+.container > * {
+    margin: 0 25px;
+}
+
+.main-nav {
+    min-width: 160px;
+}
+
+.main-nav li {
+    list-style: none;
+    border-left: 4px solid yellow;
+    padding: 10px 0;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+.main-nav li:nth-child(1) { border-color: greenyellow; }
+.main-nav li:nth-child(2) { border-color: yellow; }
+.main-nav li:nth-child(3) { border-color: orange; }
+.main-nav li:nth-child(4) { border-color: darkorange; }
+.main-nav li:nth-child(5) { border-color: yellow; }
+.main-nav li:nth-child(6) { border-color: greenyellow; }
+.main-nav li:nth-child(7) { border-color: lightgreen; }
+.main-nav li:nth-child(8) { border-color: darkgreen; }
+
+main {
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.page-footer {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(FONTY/HelveticaNeue-CondensedBold.otf);
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(FONTY/OpenSans-CondLight.ttf);
+}
